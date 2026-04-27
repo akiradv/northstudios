@@ -3,438 +3,518 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soltryx - Artista Musical</title>
-    <style>
-        /* Estilos globais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0f0f0f;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        /* Cabeçalho */
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(to bottom, #000000, #111111);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .logo {
-            font-size: 8rem;
-            font-weight: 900;
-            letter-spacing: 10px;
-            text-transform: uppercase;
-            background: linear-gradient(45deg, #7d29ff, #4ca5ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 20px;
-            animation: pulse 3s infinite alternate;
-            text-shadow: 0 0 20px rgba(125, 41, 255, 0.3);
-        }
-
-        .tagline {
-            font-size: 1.5rem;
-            font-weight: 300;
-            opacity: 0.8;
-        }
-
-        /* Animação de pulso para o logo */
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                filter: brightness(1);
-            }
-            100% {
-                transform: scale(1.05);
-                filter: brightness(1.2);
-            }
-        }
-
-        /* Partículas de fundo */
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-
-        .particle {
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            animation: float 15s infinite linear;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(20vw);
-                opacity: 0;
-            }
-        }
-
-        /* Gerar 20 partículas com posições e atrasos aleatórios */
-        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .particle:nth-child(2) { left: 20%; animation-delay: 2s; }
-        .particle:nth-child(3) { left: 30%; animation-delay: 4s; }
-        .particle:nth-child(4) { left: 40%; animation-delay: 6s; }
-        .particle:nth-child(5) { left: 50%; animation-delay: 8s; }
-        .particle:nth-child(6) { left: 60%; animation-delay: 10s; }
-        .particle:nth-child(7) { left: 70%; animation-delay: 12s; }
-        .particle:nth-child(8) { left: 80%; animation-delay: 14s; }
-        .particle:nth-child(9) { left: 90%; animation-delay: 1s; }
-        .particle:nth-child(10) { left: 15%; animation-delay: 3s; }
-        .particle:nth-child(11) { left: 25%; animation-delay: 5s; }
-        .particle:nth-child(12) { left: 35%; animation-delay: 7s; }
-        .particle:nth-child(13) { left: 45%; animation-delay: 9s; }
-        .particle:nth-child(14) { left: 55%; animation-delay: 11s; }
-        .particle:nth-child(15) { left: 65%; animation-delay: 13s; }
-        .particle:nth-child(16) { left: 75%; animation-delay: 0.5s; }
-        .particle:nth-child(17) { left: 85%; animation-delay: 2.5s; }
-        .particle:nth-child(18) { left: 95%; animation-delay: 4.5s; }
-        .particle:nth-child(19) { left: 5%; animation-delay: 6.5s; }
-        .particle:nth-child(20) { left: 0%; animation-delay: 8.5s; }
-
-        /* Conteúdo principal */
-        .content {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #ffffff;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 3px;
-            background: linear-gradient(to right, #7d29ff, #4ca5ff);
-            bottom: -10px;
-            left: 25%;
-        }
-
-        /* Seção de música */
-        .music-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 0;
-        }
-
-        .spotify-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            width: 100%;
-            margin-top: 30px;
-        }
-
-        .spotify-embed {
-            width: 100%;
-            height: 380px;
-            background-color: #121212;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .spotify-embed:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: #080808;
-            padding: 30px 0;
-            text-align: center;
-            margin-top: 50px;
-            color: #888888;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            border-radius: 50%;
-            background: #333;
-            transition: background 0.3s;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        .social-link:hover {
-            background: linear-gradient(45deg, #7d29ff, #4ca5ff);
-        }
-
-        .copyright {
-            font-size: 0.9rem;
-        }
-
-        /* Menu de navegação */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            transition: background 0.3s ease;
-        }
-
-        nav.scrolled {
-            background-color: rgba(0, 0, 0, 0.9);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #7d29ff, #4ca5ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-link {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: linear-gradient(to right, #7d29ff, #4ca5ff);
-            transition: width 0.3s;
-        }
-
-        .nav-link:hover {
-            color: #7d29ff;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .spotify-embed {
-            width: 100%;
-            height: 380px;
-            border-radius: 12px;
-            border: none;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 4rem;
-                letter-spacing: 5px;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-                text-align: center;
-                padding: 0 20px;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .spotify-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="Soltryx - Música que transcende">
+    <meta property="og:description" content="Projeto musical de Akiradv. Explorando novos universos sonoros através de batidas eletrônicas e atmosferas imersivas. Selo North Studios.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/000000/ffffff?text=SOLTRYX">
+    <meta property="og:url" content="https://soltryx.com">
+    <meta property="og:type" content="website">
+    
+    <title>Soltryx - Artista Musical | North Studios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navegação -->
-    <nav id="navbar">
-        <div class="nav-logo">SOLTRYX</div>
-        <div class="nav-links">
-            <a href="#" class="nav-link">Início</a>
-            <a href="#music" class="nav-link">Música</a>
-            <a href="#sobre" class="nav-link">Sobre</a>
-            <a href="#contato" class="nav-link">Contato</a>
-        </div>
-    </nav>
 
-    <!-- Cabeçalho com Nome do Artista -->
-    <header>
-        <div class="particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
+<!-- PRÉ-LOADER -->
+<div id="preloader" class="preloader">
+    <div class="preloader-logo">North Studios</div>
+</div>
+
+<!-- BOTÃO VOLTAR AO TOPO -->
+<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-rocket"></i>
+</button>
+
+<!-- Navegação fixa -->
+<nav id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="nav-logo">SOLTRYX</div>
+    <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">Início</a>
+        <a href="#lancamento" class="nav-link">Lançamento</a>
+        <a href="#discografia" class="nav-link">Discografia</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#contato" class="nav-link">Contato</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- Header / Hero -->
+<header id="home" class="hero">
+    <div class="particles" id="particles"></div>
+    <div class="hero-content">
         <h1 class="logo">SOLTRYX</h1>
-        <p class="tagline">Explorando novos universos sonoros</p>
-    </header>
+        <p class="tagline" id="tagline"></p>
+    </div>
+</header>
 
-    <!-- Conteúdo Principal -->
-    <div class="content">
-        <!-- Seção de Música com Projetos do Spotify -->
-        <section id="music" class="music-section">
-            <h2 class="section-title">Meus Projetos</h2>
-            <div class="spotify-container">
-                <!-- Insira aqui seus projetos do Spotify -->
-                <!-- Placeholder 1 -->
-                <div class="spotify-embed">
-                    <iframe class="spotify-embed" src="https://open.spotify.com/embed/album/6jrpXF2ikBNzCG0q2gKhEB" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    <!-- Substitua pelo iframe do Spotify quando tiver seus links -->
-                    <!-- Exemplo: <iframe src="https://open.spotify.com/embed/album/SEU_ID_AQUI" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
-                </div>
-                
-                <!-- Placeholder 2 -->
-                <div class="spotify-embed">
-                    <iframe class="spotify-embed" src="https://open.spotify.com/embed/album/3gnR7zOTD0t54ov80XyzuB" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
-                
-                <!-- Placeholder 3 -->
-                <div class="spotify-embed">
-                    <iframe class="spotify-embed" src="https://open.spotify.com/embed/album/0niuYSLt1M5brJVE0Zw2BN" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<!-- Conteúdo Principal -->
+<main class="content">
+
+    <!-- Lançamento Recente em Destaque -->
+    <section id="lancamento" class="section">
+        <h2 class="section-title">Lançamento Recente</h2>
+        <div class="release-card animate-on-scroll">
+            <div class="release-cover">
+                <!-- Exemplo com embed do Spotify (substitua o src pelo link do seu lançamento mais recente) -->
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4mn1KJAyIAgMB7FDUyH2S6?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="release-info">
+                <h3 class="release-title">Smooth Changes</h3>
+                <p class="release-date">Lançado em 13 Março 2026 • Álbum • 9 faixas</p>
+                <p class="release-desc">Uma jornada sonora que mistura Smooth Jazz com Free Jazz</p>
+                <div class="release-links">
+                    <a href="https://open.spotify.com/intl-pt/album/4mn1KJAyIAgMB7FDUyH2S6" target="_blank" class="btn btn-primary"><i class="fab fa-spotify"></i> Ouvir no Spotify</a>
+                    <!-- Adicione outras plataformas se tiver (YouTube Music, Apple Music, etc.) -->
+                    <!-- a href="#" class="btn btn-outline"><i class="fas fa-link"></i> Outras plataformas</a> -->
                 </div>
             </div>
-        </section>
-
-        <!-- Seção Sobre -->
-        <section id="sobre" class="about-section">
-            <h2 class="section-title">Sobre Mim</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8; color: #cccccc;">
-                Soltryx é um projeto musical que combina elementos eletrônicos com influências de diversos gêneros.
-                Minha música busca criar atmosferas imersivas e explorar novos territórios sonoros,
-                levando os ouvintes a uma jornada única através de texturas e ritmos inovadores.
-                <br><br>
-                Comecei a produzir música em [ano] e desde então venho desenvolvendo um estilo único
-                que reflete minhas experiências e visão artística. Cada projeto é uma nova oportunidade
-                para experimentar e expandir os limites da minha criatividade.
-            </p>
-        </section>
-    </div>
-
-    <!-- Rodapé -->
-    <footer>
-        <div class="social-links">
-            <a href="#" class="social-link">FB</a>
-            <a href="https://instagram.com/soltryx_" class="social-link">IG</a>
-            <a href="#" class="social-link">EM</a>
-            <a href="#" class="social-link">SP</a>
         </div>
-        <p class="copyright">© 2025 Soltryx. Todos os direitos reservados. akiradvb@gmail.com</p>
-    </footer>
+    </section>
 
-    <!-- Scripts -->
-    <script>
-        // Mudar o fundo da navegação ao rolar
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+ <!-- Discografia / Linha do Tempo -->
+<section id="discografia" class="section">
+    <h2 class="section-title">Discografia</h2>
+    <div class="timeline">
+        <!-- 2026 -->
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Pretty-vacation.jpg" alt="Capa Pretty Vacation" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Pretty Vacation</h4>
+                    <p>Single • 2 faixas</p>
+                    <p class="release-date">10 abril 2026</p>
+                    <p>Primeiro single do Álbum de Soltryx que é a historia de como foi a viagem de ferias dele.</p>
+                    <a href="https://open.spotify.com/album/47dgWPvC9NL3RzBhAzJGQ1" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
 
-        // Rolagem suave para links de navegação
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Smooth-changes.jpg" alt="Capa Smooth Changes" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Smooth Changes</h4>
+                    <p>Álbum • 9 faixas</p>
+                    <p class="release-date">13 Março 2026</p>
+                    <p>Álbum de jazz envolvendo uma historia de um rapaz que conheceu uma menina na internet. (Hístoria ficticia)</p>
+                    <a href="https://open.spotify.com/intl-pt/album/4mn1KJAyIAgMB7FDUyH2S6" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
 
-        const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-      // Animação simples para o botão hamburger
-      hamburger.classList.toggle('open');
-    });
-    </script>
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/anniVersary.jpg" alt="Capa anniVersary" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>anniVersary</h4>
+                    <p>Single • 1 faixa</p>
+                    <p class="release-date">23 Janeiro 2026</p>
+                    <p>Musica emocional dedicado ao aniversario da Irmã mais velha de Soltryx. (A capa tem traço do que a irmã  gosta, oceano, biologia marinha)</p>
+                    <a href="https://open.spotify.com/album/0xcKJaGgMlbHsSS4d9WAmB" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Yellow.jpg" alt="Capa EP Amarelo" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Yellow</h4>
+                    <p>EP • 5 faixas</p>
+                    <p class="release-date">17 Janeiro 2026</p>
+                    <p>Terceiro EP das cores, amarelo, com uma pegada nova. (Todos as musicas dos EPs das cores tem sentimentos parecidos com o que a cor passa. Por exemplo: Amarelo: Otimismo)</p>
+                    <a href="https://open.spotify.com/album/6WZu7RaOBLrZbO3A129olU" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Force.jpg" alt="Capa Force" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Force (Experimental beat)</h4>
+                    <p>Single • 1 faixa</p>
+                    <p class="release-date">31 Dezembro 2025</p>
+                    <p>Soltryx tem uma tradição de sempre soltar musica no ultimo ou primeiro dia do ano.</p>
+                    <a href="https://open.spotify.com/album/4jxySTJag1noVw5SRsPK2F" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Holldone-dancehall.jpg" alt="Capa Holldone: Dancehall" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Holldone: DanceHall</h4>
+                    <p>Álbum • 14 faixas</p>
+                    <p class="release-date">30 Novembro 2025</p>
+                    <p>Segundo álbum da Soundtrack de Holldone, agora nas pistas de dança. A capa tem personagens do jogo original.</p>
+                    <a href="https://open.spotify.com/album/3UNlOW6CfSZte24JgezMgj" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Morpho.jpg" alt="Capa Morpho" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Morpho</h4>
+                    <p>Single • 2 faixas</p>
+                    <p class="release-date">30 Novembro 2025</p>
+                    <p>Musicas com o estilo Break Core, nome das musicas escolhido por amigo.</p>
+                    <a href="https://open.spotify.com/album/3U4lkUcvuAsKkadddPYeWI" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Winter.jpg" alt="Capa Winter is over" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Winter is over</h4>
+                    <p>Single • 2 faixas</p>
+                    <p class="release-date">10 Novembro 2025</p>
+                    <p>Musicas perfeitas para ouvir sangrando na neve.</p>
+                    <a href="https://open.spotify.com/album/2nHxzx79cSF0j05IAtMPrN" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Vermelho-extended.jpg" alt="Capa EP Vermelho Extended" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>&F83C45 Extended</h4>
+                    <p>Álbum • 11 faixas</p>
+                    <p class="release-date">8 Novembro 2025</p>
+                    <p>EP da cor vermelho estendido adicionando mais 4 musicas novas.</p>
+                    <a href="https://open.spotify.com/album/3eTgSC6VdXopc44mLmrIuT" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Holldone.jpg" alt="Capa HOLLDONE" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>HOLLDONE</h4>
+                    <p>Álbum • 11 faixas</p>
+                    <p class="release-date">31 Outubro 2025</p>
+                    <p>Primeiro álbum da Soundtrack do jogo Holldone(jogo feito por disk)</p>
+                    <a href="https://open.spotify.com/album/64NssxxZAo9GuA2RQiP0wh" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/skyforest.jpg" alt="Capa Sky/Forest" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>sky/forest</h4>
+                    <p>Single • 2 faixas</p>
+                    <p class="release-date">15 Outubro 2025</p>
+                    <p>2 faixas que se completam por si só.</p>
+                    <a href="https://open.spotify.com/album/6goH6PEVO0wHHeR32n6xiA" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Ozone.jpg" alt="Capa Ozone" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Ozone</h4>
+                    <p>Single • 1 faixa</p>
+                    <p class="release-date">1 Outubro 2025</p>
+                    <p>Primeira faixa eletronica, com samples.</p>
+                    <a href="https://open.spotify.com/album/3KcrRmbtZ3vosw54arwiHu" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Northstar.jpg" alt="Capa Northstar" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>NORTHSTAR</h4>
+                    <p>Single • 1 faixa</p>
+                    <p class="release-date">10 Setembro 2025</p>
+                    <p>Single com bastante energia para voltar a ativa.</p>
+                    <a href="https://open.spotify.com/intl-pt/album/6GAdKmJN2DlKRO4fMBn06a" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Azul.jpg" alt="Capa EP Azul" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>&3C8DF8</h4>
+                    <p>EP • 5 faixas</p>
+                    <p class="release-date">8 Junho 2025</p>
+                    <p>Segundo EP da sequencia de cores, azul.</p>
+                    <a href="https://open.spotify.com/album/6Rm7eFz172xvIL0y01RHW9" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Vermelho.jpg" alt="Capa EP Vermelho" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>&F83C45</h4>
+                    <p>EP • 5 faixas</p>
+                    <p class="release-date">8 Maio 2025</p>
+                    <p>Primeiro EP da sequencia de cores, vermelho.</p>
+                    <a href="https://open.spotify.com/album/52hFnDorbYK1fullTLOSw8" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/22.jpg" alt="Capa 22" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>22</h4>
+                    <p>EP • 6 faixas</p>
+                    <p class="release-date">22 Abril 2025</p>
+                    <p>Primeiro EP na North Studios, caracterizado por beats com samples.</p>
+                    <a href="https://open.spotify.com/album/4fAaSOSONwBKpdKs4Nm6pq" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Instrumentals2.jpg" alt="Capa Instrumentals 2" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Instrumentals, Pt.2</h4>
+                    <p>Single • 2 faixas</p>
+                    <p class="release-date">10 Abril 2025</p>
+                    <p>Continuação do seu primeiro single.</p>
+                    <a href="https://open.spotify.com/album/5W3QagJD3VEmZ7bTt9PDAQ" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/North.jpg" alt="Capa North" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>North</h4>
+                    <p>Single • 1 faixa</p>
+                    <p class="release-date">2 Abril 2025</p>
+                    <p>Beat de trap com sample de minecraft (Musica que introduziu Soltryx na North Studios)</p>
+                    <a href="https://open.spotify.com/album/60g1CihyV80gy2sGgJCKHy" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2024 (vários lançamentos) -->
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Reinicio.jpg" alt="Capa Reinício" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Reinício</h4>
+                    <p>Álbum • 11 faixas</p>
+                    <p class="release-date">31 Dezembro 2024</p>
+                    <p>Beats suaves com uma vibe energizada.</p>
+                    <a href="https://open.spotify.com/album/6jrpXF2ikBNzCG0q2gKhEB" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/One-Night-in-December.jpg" alt="Capa One Night in December" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>One Night in December</h4>
+                    <p>Álbum • 18 faixas</p>
+                    <p class="release-date">10 Dezembro 2024</p>
+                    <p>Beats suaves, álbum feito originalmente para um amigo de escola.</p>
+                    <a href="https://open.spotify.com/album/2Ml37MC2nDyBhN0KyW5r1h" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/New-Age.jpg" alt="Capa New Age" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>New Age</h4>
+                    <p>EP • 3 faixas</p>
+                    <p class="release-date">25 Novembro 2024</p>
+                    <p>Uma nova descoberta para Soltryx no genero New Age.</p>
+                    <a href="https://open.spotify.com/album/3gnR7zOTD0t54ov80XyzuB" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Nights.jpg" alt="Capa Nights" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Nights</h4>
+                    <p>EP • 3 faixas</p>
+                    <p class="release-date">24 Novembro 2024</p>
+                    <p>Duas faixas que deixam um rastro de melancolia e esperança.</p>
+                    <a href="https://open.spotify.com/album/0niuYSLt1M5brJVE0Zw2BN" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Two-Sides.jpg" alt="Capa Two Sides" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Two Sides</h4>
+                    <p>Single • 2 faixas</p>
+                    <p class="release-date">14 Novembro 2024</p>
+                    <p>Segundo single de Soltryx.</p>
+                    <a href="https://open.spotify.com/album/1JkLRMQjqzoBDptAMK59YV" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-card" data-tilt>
+                <img src="./covers/Instrumentals.jpg" alt="Capa Instrumentals" loading="lazy">
+                <div class="timeline-card-info">
+                    <h4>Instrumentals</h4>
+                    <p>Single • 2 faixas</p>
+                    <p class="release-date">5 Novembro 2024</p>
+                    <p>Single que introduziu Soltryx ao mundo.</p>
+                    <a href="https://open.spotify.com/album/7qCucEV9GQ3Lu6fItSwICE" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section">
+        <h2 class="section-title">Sobre Soltryx</h2>
+        <div class="about-container animate-on-scroll">
+            <div class="about-photo">
+                <img src="https://via.placeholder.com/400x400/000000/ffffff?text=SOLTRYX" alt="Foto de perfil" loading="lazy">
+            </div>
+            <div class="about-text">
+                <p>Soltryx é o projeto musical de <strong>Akiradv</strong>, nascido da vontade de explorar novos universos sonoros. Combinando elementos eletrônicos com influências de diversos gêneros, cada faixa busca criar atmosferas imersivas e levar o ouvinte a uma jornada única.</p>
+                <p>Desde 2024, venho experimentando texturas, ritmos e melodias que refletem minhas experiências e visão artística. Todos os lançamentos saem pelo selo independente <strong>North Studios</strong>, um laboratório particular de criação sonora.</p>
+                <p>Cada projeto é um convite para expandir os limites da criatividade e descobrir novas paisagens sonoras. Seja bem-vindo(a) a bordo.</p>
+                <div class="about-stats">
+                    <div><span>24+</span> Lançamentos (6 independentemente)</div>
+                    <div><span>2024</span> Estréia</div>
+                    <div><span>North Studios</span> Selo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Contato -->
+<section id="contato" class="section">
+    <h2 class="section-title">Contato</h2>
+    <form id="contactForm" class="contact-form animate-on-scroll">
+        <p style="text-align:center; margin-bottom:1rem;">Tem alguma ideia, proposta ou só quer trocar uma ideia? Manda um alô.</p>
+        
+        <!-- Indicadores de sucesso/erro -->
+        <div data-fs-success style="display:none; color: #fff; text-align:center; margin-bottom:1rem;">Mensagem enviada com sucesso! 🚀</div>
+        <div data-fs-error style="display:none; color: #ff6b6b; text-align:center; margin-bottom:1rem;"></div>
+
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" data-fs-field required>
+            <span data-fs-error="nome" style="color:#ff6b6b; font-size:0.85rem;"></span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" data-fs-field required>
+            <span data-fs-error="email" style="color:#ff6b6b; font-size:0.85rem;"></span>
+        </div>
+        <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" data-fs-field required></textarea>
+            <span data-fs-error="mensagem" style="color:#ff6b6b; font-size:0.85rem;"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" data-fs-submit-btn>
+            <i class="fas fa-paper-plane"></i> Enviar
+        </button>
+    </form>
+</section>
+
+</main>
+
+<!-- Rodapé -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>Soltryx</h3>
+            <p>Explorando novos universos sonoros.<br>Selo: North Studios</p>
+            <div class="social-links">
+                <a href="https://instagram.com/soltryx_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://open.spotify.com/artist/5x5RppM4rHf3Tsse5PfuUo" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="mailto:akiradvb@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="#lancamento">Lançamento</a></li>
+                <li><a href="#discografia">Discografia</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Newsletter</h4>
+            <p>Receba novidades por email.</p>
+            <form class="newsletter-form" action="#" method="POST">
+                <input type="email" placeholder="seu@email.com" required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Soltryx. Todos os direitos reservados. <a href="mailto:akiradvb@gmail.com">akiradvb@gmail.com</a> • North Studios</p>
+    </div>
+</footer>
+
+<script>window.formspree=window.formspree||function(){(formspree.q=formspree.q||[]).push(arguments)};formspree('initForm',{formElement:'#contactForm',formId:'mlgakjgg'});</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+<script src="script.js"></script>
 </body>
 </html>
