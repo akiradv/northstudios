@@ -3,40 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta tags Open Graph -->
-    <meta property="og:title" content="Soltryx - Música que transcende">
-    <meta property="og:description" content="Projeto musical de Akiradv. Explorando novos universos sonoros através de batidas eletrônicas e atmosferas imersivas. Selo North Studios.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/000000/ffffff?text=SOLTRYX">
-    <meta property="og:url" content="https://soltryx.com">
-    <meta property="og:type" content="website">
-    
-    <title>Soltryx - Artista Musical | North Studios</title>
-    <link rel="stylesheet" href="style.css">
+    <title>North Studios</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
+        .logo h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: 8px;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .subtitle {
+            color: #aaa;
+            margin-bottom: 4rem;
+            font-size: 1.2rem;
+        }
+        .artists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .artist-card {
+            background-color: #111;
+            border: 1px solid #222;
+            border-radius: 20px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .artist-card:hover {
+            transform: translateY(-5px);
+            border-color: #555;
+        }
+        .artist-card img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .artist-card h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .artist-card p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        footer {
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #aaa;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="logo">
+            <h1>North Studios</h1>
+            <p class="subtitle">Selo Independente</p>
+        </div>
 
-<!-- PRÉ-LOADER -->
-<div id="preloader" class="preloader">
-    <div class="preloader-logo">North Studios</div>
-</div>
+        <div class="artists-grid">
+            <!-- Card do Soltryx -->
+            <a href="soltryx.html" class="artist-card">
+                <img src="covers/soltryx/soltryxlogo.png" alt="Soltryx" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=SOLTRYX'">
+                <h2>Soltryx</h2>
+                <p>Explorando novos universos sonoros através de beats eletrônicos e jazz.</p>
+            </a>
 
-<!-- BOTÃO VOLTAR AO TOPO -->
-<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
-    <i class="fas fa-rocket"></i>
-</button>
+            <!-- Card do Orange Isle -->
+            <a href="orangeisle.html" class="artist-card">
+                <img src="covers/orangeisle/orangelogo.png" alt="Orange Isle" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=ORANGE+ISLE'">
+                <h2>Orange Isle</h2>
+                <p>Novos sentimentos sonoros. Bossa nova e jazz introspectivo.</p>
+            </a>
+        </div>
 
-<!-- Navegação fixa -->
-<nav id="navbar" role="navigation" aria-label="Navegação principal">
-    <div class="nav-logo">SOLTRYX</div>
-    <div class="nav-links" id="navLinks">
-        <a href="#home" class="nav-link">Início</a>
-        <a href="#lancamento" class="nav-link">Lançamento</a>
-        <a href="#discografia" class="nav-link">Discografia</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-        <a href="#contato" class="nav-link">Contato</a>
+        <footer>
+            <p>© 2026 North Studios. <a href="mailto:northstudios@gmail.com">northstudios@gmail.com</a></p>
+        </footer>
     </div>
+<<<<<<< HEAD
+=======
     <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
         <i class="fas fa-bars"></i>
     </button>
@@ -431,7 +511,7 @@
                 <img src="https://via.placeholder.com/400x400/000000/ffffff?text=SOLTRYX" alt="Foto de perfil" loading="lazy">
             </div>
             <div class="about-text">
-                <p>Soltryx é o projeto musical de <strong>Akiradv</strong>, nascido da vontade de explorar novos universos sonoros. Combinando elementos eletrônicos com influências de diversos gêneros, cada faixa busca criar atmosferas imersivas e levar o ouvinte a uma jornada única.</p>
+                <p>Soltryx é o projeto musical de <strong>Akira Dev</strong>, nascido da vontade de explorar novos universos sonoros. Combinando elementos eletrônicos com influências de diversos gêneros, cada faixa busca criar atmosferas imersivas e levar o ouvinte a uma jornada única.</p>
                 <p>Desde 2024, venho experimentando texturas, ritmos e melodias que refletem minhas experiências e visão artística. Todos os lançamentos saem pelo selo independente <strong>North Studios</strong>, um laboratório particular de criação sonora.</p>
                 <p>Cada projeto é um convite para expandir os limites da criatividade e descobrir novas paisagens sonoras. Seja bem-vindo(a) a bordo.</p>
                 <div class="about-stats">
@@ -508,7 +588,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2026 Soltryx. Todos os direitos reservados. <a href="mailto:akiradvb@gmail.com">akiradvb@gmail.com</a> • North Studios</p>
+        <p>© 2026 North Studios. Todos os direitos reservados. <a href="mailto:akiradvb@gmail.com">akiradvb@gmail.com</a> • North Studios</p>
     </div>
 </footer>
 
@@ -516,5 +596,6 @@
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 <script src="script.js"></script>
+>>>>>>> 4e1854602388b46fa5cf9635bf6d3eaa98bc93a7
 </body>
 </html>
