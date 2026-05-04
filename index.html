@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Studios</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/northstudios/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/northstudios/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/northstudios/favicon-16x16.png">
     <style>
         * {
             margin: 0;
@@ -12,7 +18,7 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #000000;
+            background: radial-gradient(ellipse at center, #0a0a0a 0%, #000000 70%);
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -21,57 +27,117 @@
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            padding: 2rem;
+            padding: 1.5rem;
+            position: relative;
         }
+        
+        /* 🌟 Bolhas de luz com blur */
+        .light-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #ffffff, #666666);
+            top: -100px;
+            left: -100px;
+        }
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #ffffff, #888888);
+            bottom: -50px;
+            right: -50px;
+        }
+        .orb-3 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #ffffff, #aaaaaa);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
         .container {
             max-width: 1000px;
             width: 100%;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
         .logo h1 {
-            font-size: 4rem;
-            font-weight: 900;
-            letter-spacing: 8px;
-            margin-bottom: 1rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5rem;
+            font-weight: 400;
+            letter-spacing: 6px;
+            margin-bottom: 0.5rem;
             color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .north-star {
+            font-size: 3rem;
+            color: #fff;
+            opacity: 0.8;
         }
         .subtitle {
             color: #aaa;
-            margin-bottom: 4rem;
+            margin-bottom: 0.8rem;
             font-size: 1.2rem;
+        }
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: #fff;
+            margin: 0 auto 2rem;
+            opacity: 0.5;
         }
         .artists-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
         .artist-card {
             background-color: #111;
             border: 1px solid #222;
             border-radius: 20px;
-            padding: 2rem;
+            padding: 1.5rem;
             transition: transform 0.3s, border-color 0.3s;
             text-decoration: none;
             color: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
         }
         .artist-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             border-color: #555;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
         }
         .artist-card img {
             width: 100%;
-            max-width: 200px;
+            max-width: 180px;
             border-radius: 8px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.3rem;
+            transition: transform 0.3s;
+        }
+        .artist-card:hover img {
+            transform: scale(1.03);
         }
         .artist-card h2 {
-            font-size: 2rem;
-            font-weight: 700;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
         }
         .artist-card p {
             color: #aaa;
@@ -122,6 +188,11 @@
 </head>
 <body>
 
+<!-- 🌟 Bolhas de luz decorativas -->
+<div class="light-orb orb-1"></div>
+<div class="light-orb orb-2"></div>
+<div class="light-orb orb-3"></div>
+
 <!-- Seletor de Idioma -->
 <div class="lang-switcher" id="langSwitcher">
     <button class="lang-btn" onclick="changeLanguage('pt-br')" id="btn-pt">PT</button>
@@ -130,28 +201,32 @@
 
 <div class="container">
     <div class="logo">
-        <h1>North Studios</h1>
+        <h1>
+            <i class="fa-regular fa-star north-star"></i>
+            North Studios
+        </h1>
         <p class="subtitle" data-i18n="hubSubtitle">Selo Independente</p>
+        <div class="divider"></div>
     </div>
 
     <div class="artists-grid">
         <!-- Card do Soltryx -->
         <a href="soltryx.html" class="artist-card">
-            <img src="covers/soltryx/Smooth-changes.jpg" alt="Soltryx" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=SOLTRYX'">
+            <img src="covers/soltryx/soltryxlogo.png" alt="Soltryx" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=SOLTRYX'">
             <h2>Soltryx</h2>
             <p data-i18n="hubSoltryxDesc">Explorando novos universos sonoros através de beats eletrônicos e jazz.</p>
         </a>
 
         <!-- Card do Orange Isle -->
         <a href="orangeisle.html" class="artist-card">
-            <img src="covers/orangeisle/exploration.jpg" alt="Orange Isle" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=ORANGE+ISLE'">
+            <img src="covers/orangeisle/orangelogo.png" alt="Orange Isle" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=ORANGE+ISLE'">
             <h2>Orange Isle</h2>
             <p data-i18n="hubOrangeDesc">Novos sentimentos sonoros. Bossa nova e jazz introspectivo.</p>
         </a>
     </div>
 
     <footer>
-        <p>© 2026 North Studios. <a href="mailto:northstudios@gmail.com">northstudios@gmail.com</a></p>
+        <p>© 2026 North Studios. <a href="mailto:northstudiosbr@gmail.com">northstudiosbr@gmail.com</a></p>
     </footer>
 </div>
 

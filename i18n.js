@@ -1,7 +1,7 @@
 /**
  * i18n.js — Sistema de tradução reutilizável
- * Versão 1.1 — Maio/2026
- * Adicionada função global changeLanguage()
+ * Versão 1.2 — Maio/2026
+ * Suporte a data-i18n (texto) e data-i18n-html (HTML preservado)
  */
 (function () {
   'use strict';
@@ -48,6 +48,8 @@
   function applyTranslations(translations, lang) {
     if (!translations || !translations[lang]) return;
     const dict = translations[lang];
+
+    // data-i18n (texto puro)
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[key]) {
@@ -58,7 +60,14 @@
         }
       }
     });
-    if (dict['pageTitle']) document.title = dict['pageTitle'];
+
+    // data-i18n-html (preserva HTML)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key]) {
+        el.innerHTML = dict[key];
+      }
+    });
     document.documentElement.setAttribute('lang', lang);
   }
 

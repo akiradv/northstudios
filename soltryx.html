@@ -10,6 +10,9 @@
     <meta property="og:image" content="https://akiradv.github.io/northstudios/covers/soltryx/Smooth-changes.jpg">
     <meta property="og:url" content="https://akiradv.github.io/northstudios/soltryx.html">
     <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/northstudios/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/northstudios/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/northstudios/favicon-16x16.png">
     
     <title>Soltryx - North Studios</title>
     <link rel="stylesheet" href="style.css">
@@ -34,11 +37,6 @@
 <div class="lang-switcher" id="langSwitcher">
     <button class="lang-btn" onclick="changeLanguage('pt-br')" id="btn-pt">PT</button>
     <button class="lang-btn" onclick="changeLanguage('en')" id="btn-en">EN</button>
-</div>
-
-<!-- PRÉ-LOADER -->
-<div id="preloader" class="preloader">
-    <div class="preloader-logo" data-i18n="preloaderText">North Studios</div>
 </div>
 
 <!-- BOTÃO VOLTAR AO TOPO -->
@@ -93,20 +91,35 @@
 
     <!-- Discografia / Linha do Tempo -->
     <section id="discografia" class="section">
-        <h2 class="section-title">Discografia</h2>
+        <h2 class="section-title" data-i18n="sectionDiscography">Discografia</h2>
         <div class="timeline">
+
             <!-- 2026 -->
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-card" data-tilt>
+                    <img src="./covers/soltryx/OffCenter.jpg" alt="Capa OffCenter" loading="lazy">
+                    <div class="timeline-card-info">
+                        <h4>OffCenter <span class="badge-latest coming-soon" data-i18n="badgeComingSoon">Em breve.</span></h4>
+                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • <span data-i18n="tracksSoon">?</span> <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateOffCenter">17 Maio 2026</p>
+                        <p data-i18n="trackDescOffCenter">Novo álbum de trap de Soltryx, previsto para maio de 2026.</p>
+                        <span class="btn btn-small" style="opacity:0.5; cursor:default;"><i class="fas fa-clock"></i> <span data-i18n="comingSoon">Em breve</span></span>
+                    </div>
+                </div>
+            </div>
+
             <div class="timeline-item animate-on-scroll">
                 <div class="timeline-year">2026</div>
                 <div class="timeline-card" data-tilt>
                     <img src="./covers/soltryx/Pretty-vacation.jpg" alt="Capa Pretty Vacation" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Pretty Vacation
-                        <span class="badge-latest">Mais recente.</span></h4>
-                        <p>Single • 2 faixas</p>
-                        <p class="release-date">10 abril 2026</p>
-                        <p>Primeiro single do Álbum de Soltryx que é a historia de como foi a viagem de ferias dele.</p>
-                        <a href="https://open.spotify.com/album/47dgWPvC9NL3RzBhAzJGQ1" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <span class="badge-latest" data-i18n="badgeLatest">Mais recente.</span></h4>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 2 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDatePrettyVacation">10 abril 2026</p>
+                        <p data-i18n="trackDescPrettyVacation">Primeiro single do Álbum de Soltryx que é a historia de como foi a viagem de ferias dele.</p>
+                        <a href="https://open.spotify.com/album/47dgWPvC9NL3RzBhAzJGQ1" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -117,10 +130,10 @@
                     <img src="./covers/soltryx/Smooth-changes.jpg" alt="Capa Smooth Changes" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Smooth Changes</h4>
-                        <p>Álbum • 9 faixas</p>
-                        <p class="release-date">13 Março 2026</p>
-                        <p>Álbum de jazz envolvendo uma historia de um rapaz que conheceu uma menina na internet. (Hístoria ficticia)</p>
-                        <a href="https://open.spotify.com/intl-pt/album/4mn1KJAyIAgMB7FDUyH2S6" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • 9 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateSmoothChanges">13 Março 2026</p>
+                        <p data-i18n="trackDescSmoothChanges">Álbum de jazz envolvendo uma historia de um rapaz que conheceu uma menina na internet. (Hístoria ficticia)</p>
+                        <a href="https://open.spotify.com/intl-pt/album/4mn1KJAyIAgMB7FDUyH2S6" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -131,10 +144,10 @@
                     <img src="./covers/soltryx/anniVersary.jpg" alt="Capa anniVersary" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>anniVersary</h4>
-                        <p>Single • 1 faixa</p>
-                        <p class="release-date">23 Janeiro 2026</p>
-                        <p>Musica emocional dedicado ao aniversario da Irmã mais velha de Soltryx. (A capa tem traço do que a irmã  gosta, oceano, biologia marinha)</p>
-                        <a href="https://open.spotify.com/album/0xcKJaGgMlbHsSS4d9WAmB" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 1 <span data-i18n="trackSingular">faixa</span></p>
+                        <p class="release-date" data-i18n="releaseDateAnniVersary">23 Janeiro 2026</p>
+                        <p data-i18n="trackDescAnniVersary">Musica emocional dedicado ao aniversario da Irmã mais velha de Soltryx. (A capa tem traço do que a irmã  gosta, oceano, biologia marinha)</p>
+                        <a href="https://open.spotify.com/album/0xcKJaGgMlbHsSS4d9WAmB" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -145,10 +158,10 @@
                     <img src="./covers/soltryx/Yellow.jpg" alt="Capa EP Amarelo" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Yellow</h4>
-                        <p>EP • 5 faixas</p>
-                        <p class="release-date">17 Janeiro 2026</p>
-                        <p>Terceiro EP das cores, amarelo, com uma pegada nova. (Todos as musicas dos EPs das cores tem sentimentos parecidos com o que a cor passa. Por exemplo: Amarelo: Otimismo)</p>
-                        <a href="https://open.spotify.com/album/6WZu7RaOBLrZbO3A129olU" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeEP">EP</span> • 5 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateYellow">17 Janeiro 2026</p>
+                        <p data-i18n="trackDescYellow">Terceiro EP das cores, amarelo, com uma pegada nova. (Todos as musicas dos EPs das cores tem sentimentos parecidos com o que a cor passa. Por exemplo: Amarelo: Otimismo)</p>
+                        <a href="https://open.spotify.com/album/6WZu7RaOBLrZbO3A129olU" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -160,10 +173,10 @@
                     <img src="./covers/soltryx/Force.jpg" alt="Capa Force" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Force (Experimental beat)</h4>
-                        <p>Single • 1 faixa</p>
-                        <p class="release-date">31 Dezembro 2025</p>
-                        <p>Soltryx tem uma tradição de sempre soltar musica no ultimo ou primeiro dia do ano.</p>
-                        <a href="https://open.spotify.com/album/4jxySTJag1noVw5SRsPK2F" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 1 <span data-i18n="trackSingular">faixa</span></p>
+                        <p class="release-date" data-i18n="releaseDateForce">31 Dezembro 2025</p>
+                        <p data-i18n="trackDescForce">Soltryx tem uma tradição de sempre soltar musica no ultimo ou primeiro dia do ano.</p>
+                        <a href="https://open.spotify.com/album/4jxySTJag1noVw5SRsPK2F" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -174,10 +187,10 @@
                     <img src="./covers/soltryx/Holldone-dancehall.jpg" alt="Capa Holldone: Dancehall" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Holldone: DanceHall</h4>
-                        <p>Álbum • 14 faixas</p>
-                        <p class="release-date">30 Novembro 2025</p>
-                        <p>Segundo álbum da Soundtrack de Holldone, agora nas pistas de dança. A capa tem personagens do jogo original.</p>
-                        <a href="https://open.spotify.com/album/3UNlOW6CfSZte24JgezMgj" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • 14 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateHolldoneDancehall">30 Novembro 2025</p>
+                        <p data-i18n="trackDescHolldoneDancehall">Segundo álbum da Soundtrack de Holldone, agora nas pistas de dança. A capa tem personagens do jogo original.</p>
+                        <a href="https://open.spotify.com/album/3UNlOW6CfSZte24JgezMgj" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -188,10 +201,10 @@
                     <img src="./covers/soltryx/Morpho.jpg" alt="Capa Morpho" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Morpho</h4>
-                        <p>Single • 2 faixas</p>
-                        <p class="release-date">30 Novembro 2025</p>
-                        <p>Musicas com o estilo Break Core, nome das musicas escolhido por amigo.</p>
-                        <a href="https://open.spotify.com/album/3U4lkUcvuAsKkadddPYeWI" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 2 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateMorpho">30 Novembro 2025</p>
+                        <p data-i18n="trackDescMorpho">Musicas com o estilo Break Core, nome das musicas escolhido por amigo.</p>
+                        <a href="https://open.spotify.com/album/3U4lkUcvuAsKkadddPYeWI" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -202,10 +215,10 @@
                     <img src="./covers/soltryx/Winter.jpg" alt="Capa Winter is over" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Winter is over</h4>
-                        <p>Single • 2 faixas</p>
-                        <p class="release-date">10 Novembro 2025</p>
-                        <p>Musicas perfeitas para ouvir sangrando na neve.</p>
-                        <a href="https://open.spotify.com/album/2nHxzx79cSF0j05IAtMPrN" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 2 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateWinter">10 Novembro 2025</p>
+                        <p data-i18n="trackDescWinter">Musicas perfeitas para ouvir sangrando na neve.</p>
+                        <a href="https://open.spotify.com/album/2nHxzx79cSF0j05IAtMPrN" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -216,10 +229,10 @@
                     <img src="./covers/soltryx/Vermelho-extended.jpg" alt="Capa EP Vermelho Extended" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>&F83C45 Extended</h4>
-                        <p>Álbum • 11 faixas</p>
-                        <p class="release-date">8 Novembro 2025</p>
-                        <p>EP da cor vermelho estendido adicionando mais 4 musicas novas.</p>
-                        <a href="https://open.spotify.com/album/3eTgSC6VdXopc44mLmrIuT" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • 11 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateVermelhoExtended">8 Novembro 2025</p>
+                        <p data-i18n="trackDescVermelhoExtended">EP da cor vermelho estendido adicionando mais 4 musicas novas.</p>
+                        <a href="https://open.spotify.com/album/3eTgSC6VdXopc44mLmrIuT" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -230,10 +243,10 @@
                     <img src="./covers/soltryx/Holldone.jpg" alt="Capa HOLLDONE" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>HOLLDONE</h4>
-                        <p>Álbum • 11 faixas</p>
-                        <p class="release-date">31 Outubro 2025</p>
-                        <p>Primeiro álbum da Soundtrack do jogo Holldone(jogo feito por disk)</p>
-                        <a href="https://open.spotify.com/album/64NssxxZAo9GuA2RQiP0wh" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • 11 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateHolldone">31 Outubro 2025</p>
+                        <p data-i18n="trackDescHolldone">Primeiro álbum da Soundtrack do jogo Holldone(jogo feito por disk)</p>
+                        <a href="https://open.spotify.com/album/64NssxxZAo9GuA2RQiP0wh" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -244,10 +257,10 @@
                     <img src="./covers/soltryx/skyforest.jpg" alt="Capa Sky/Forest" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>sky/forest</h4>
-                        <p>Single • 2 faixas</p>
-                        <p class="release-date">15 Outubro 2025</p>
-                        <p>2 faixas que se completam por si só.</p>
-                        <a href="https://open.spotify.com/album/6goH6PEVO0wHHeR32n6xiA" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 2 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateSkyforest">15 Outubro 2025</p>
+                        <p data-i18n="trackDescSkyforest">2 faixas que se completam por si só.</p>
+                        <a href="https://open.spotify.com/album/6goH6PEVO0wHHeR32n6xiA" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -258,10 +271,10 @@
                     <img src="./covers/soltryx/Ozone.jpg" alt="Capa Ozone" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Ozone</h4>
-                        <p>Single • 1 faixa</p>
-                        <p class="release-date">1 Outubro 2025</p>
-                        <p>Primeira faixa eletronica, com samples.</p>
-                        <a href="https://open.spotify.com/album/3KcrRmbtZ3vosw54arwiHu" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 1 <span data-i18n="trackSingular">faixa</span></p>
+                        <p class="release-date" data-i18n="releaseDateOzone">1 Outubro 2025</p>
+                        <p data-i18n="trackDescOzone">Primeira faixa eletronica, com samples.</p>
+                        <a href="https://open.spotify.com/album/3KcrRmbtZ3vosw54arwiHu" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -272,10 +285,10 @@
                     <img src="./covers/soltryx/Northstar.jpg" alt="Capa Northstar" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>NORTHSTAR</h4>
-                        <p>Single • 1 faixa</p>
-                        <p class="release-date">10 Setembro 2025</p>
-                        <p>Single com bastante energia para voltar a ativa.</p>
-                        <a href="https://open.spotify.com/intl-pt/album/6GAdKmJN2DlKRO4fMBn06a" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 1 <span data-i18n="trackSingular">faixa</span></p>
+                        <p class="release-date" data-i18n="releaseDateNorthstar">10 Setembro 2025</p>
+                        <p data-i18n="trackDescNorthstar">Single com bastante energia para voltar a ativa.</p>
+                        <a href="https://open.spotify.com/intl-pt/album/6GAdKmJN2DlKRO4fMBn06a" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -286,10 +299,10 @@
                     <img src="./covers/soltryx/Azul.jpg" alt="Capa EP Azul" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>&3C8DF8</h4>
-                        <p>EP • 5 faixas</p>
-                        <p class="release-date">8 Junho 2025</p>
-                        <p>Segundo EP da sequencia de cores, azul.</p>
-                        <a href="https://open.spotify.com/album/6Rm7eFz172xvIL0y01RHW9" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeEP">EP</span> • 5 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateAzul">8 Junho 2025</p>
+                        <p data-i18n="trackDescAzul">Segundo EP da sequencia de cores, azul.</p>
+                        <a href="https://open.spotify.com/album/6Rm7eFz172xvIL0y01RHW9" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -300,10 +313,10 @@
                     <img src="./covers/soltryx/Vermelho.jpg" alt="Capa EP Vermelho" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>&F83C45</h4>
-                        <p>EP • 5 faixas</p>
-                        <p class="release-date">8 Maio 2025</p>
-                        <p>Primeiro EP da sequencia de cores, vermelho.</p>
-                        <a href="https://open.spotify.com/album/52hFnDorbYK1fullTLOSw8" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeEP">EP</span> • 5 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateVermelho">8 Maio 2025</p>
+                        <p data-i18n="trackDescVermelho">Primeiro EP da sequencia de cores, vermelho.</p>
+                        <a href="https://open.spotify.com/album/52hFnDorbYK1fullTLOSw8" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -314,10 +327,10 @@
                     <img src="./covers/soltryx/22.jpg" alt="Capa 22" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>22</h4>
-                        <p>EP • 6 faixas</p>
-                        <p class="release-date">22 Abril 2025</p>
-                        <p>Primeiro EP na North Studios, caracterizado por beats com samples.</p>
-                        <a href="https://open.spotify.com/album/4fAaSOSONwBKpdKs4Nm6pq" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeEP">EP</span> • 6 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDate22">22 Abril 2025</p>
+                        <p data-i18n="trackDesc22">Primeiro EP na North Studios, caracterizado por beats com samples.</p>
+                        <a href="https://open.spotify.com/album/4fAaSOSONwBKpdKs4Nm6pq" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -328,10 +341,10 @@
                     <img src="./covers/soltryx/Instrumentals2.jpg" alt="Capa Instrumentals 2" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Instrumentals, Pt.2</h4>
-                        <p>Single • 2 faixas</p>
-                        <p class="release-date">10 Abril 2025</p>
-                        <p>Continuação do seu primeiro single.</p>
-                        <a href="https://open.spotify.com/album/5W3QagJD3VEmZ7bTt9PDAQ" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 2 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateInstrumentals2">10 Abril 2025</p>
+                        <p data-i18n="trackDescInstrumentals2">Continuação do seu primeiro single.</p>
+                        <a href="https://open.spotify.com/album/5W3QagJD3VEmZ7bTt9PDAQ" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -342,10 +355,10 @@
                     <img src="./covers/soltryx/North.jpg" alt="Capa North" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>North</h4>
-                        <p>Single • 1 faixa</p>
-                        <p class="release-date">2 Abril 2025</p>
-                        <p>Beat de trap com sample de minecraft (Musica que introduziu Soltryx na North Studios)</p>
-                        <a href="https://open.spotify.com/album/60g1CihyV80gy2sGgJCKHy" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 1 <span data-i18n="trackSingular">faixa</span></p>
+                        <p class="release-date" data-i18n="releaseDateNorth">2 Abril 2025</p>
+                        <p data-i18n="trackDescNorth">Beat de trap com sample de minecraft (Musica que introduziu Soltryx na North Studios)</p>
+                        <a href="https://open.spotify.com/album/60g1CihyV80gy2sGgJCKHy" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -357,10 +370,10 @@
                     <img src="./covers/soltryx/Reinicio.jpg" alt="Capa Reinício" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Reinício</h4>
-                        <p>Álbum • 11 faixas</p>
-                        <p class="release-date">31 Dezembro 2024</p>
-                        <p>Beats suaves com uma vibe energizada.</p>
-                        <a href="https://open.spotify.com/album/6jrpXF2ikBNzCG0q2gKhEB" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • 11 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateReinicio">31 Dezembro 2024</p>
+                        <p data-i18n="trackDescReinicio">Beats suaves com uma vibe energizada.</p>
+                        <a href="https://open.spotify.com/album/6jrpXF2ikBNzCG0q2gKhEB" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -371,10 +384,10 @@
                     <img src="./covers/soltryx/One-Night-in-December.jpg" alt="Capa One Night in December" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>One Night in December</h4>
-                        <p>Álbum • 18 faixas</p>
-                        <p class="release-date">10 Dezembro 2024</p>
-                        <p>Beats suaves, álbum feito originalmente para um amigo de escola.</p>
-                        <a href="https://open.spotify.com/album/2Ml37MC2nDyBhN0KyW5r1h" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • 18 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateOneNight">10 Dezembro 2024</p>
+                        <p data-i18n="trackDescOneNight">Beats suaves, álbum feito originalmente para um amigo de escola.</p>
+                        <a href="https://open.spotify.com/album/2Ml37MC2nDyBhN0KyW5r1h" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -385,10 +398,10 @@
                     <img src="./covers/soltryx/New-Age.jpg" alt="Capa New Age" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>New Age</h4>
-                        <p>EP • 3 faixas</p>
-                        <p class="release-date">25 Novembro 2024</p>
-                        <p>Uma nova descoberta para Soltryx no genero New Age.</p>
-                        <a href="https://open.spotify.com/album/3gnR7zOTD0t54ov80XyzuB" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeEP">EP</span> • 3 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateNewAge">25 Novembro 2024</p>
+                        <p data-i18n="trackDescNewAge">Uma nova descoberta para Soltryx no genero New Age.</p>
+                        <a href="https://open.spotify.com/album/3gnR7zOTD0t54ov80XyzuB" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -399,10 +412,10 @@
                     <img src="./covers/soltryx/Nights.jpg" alt="Capa Nights" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Nights</h4>
-                        <p>EP • 3 faixas</p>
-                        <p class="release-date">24 Novembro 2024</p>
-                        <p>Duas faixas que deixam um rastro de melancolia e esperança.</p>
-                        <a href="https://open.spotify.com/album/0niuYSLt1M5brJVE0Zw2BN" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeEP">EP</span> • 3 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateNights">24 Novembro 2024</p>
+                        <p data-i18n="trackDescNights">Duas faixas que deixam um rastro de melancolia e esperança.</p>
+                        <a href="https://open.spotify.com/album/0niuYSLt1M5brJVE0Zw2BN" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -413,10 +426,10 @@
                     <img src="./covers/soltryx/Two-Sides.jpg" alt="Capa Two Sides" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Two Sides</h4>
-                        <p>Single • 2 faixas</p>
-                        <p class="release-date">14 Novembro 2024</p>
-                        <p>Segundo single de Soltryx.</p>
-                        <a href="https://open.spotify.com/album/1JkLRMQjqzoBDptAMK59YV" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 2 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateTwoSides">14 Novembro 2024</p>
+                        <p data-i18n="trackDescTwoSides">Segundo single de Soltryx.</p>
+                        <a href="https://open.spotify.com/album/1JkLRMQjqzoBDptAMK59YV" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -427,10 +440,10 @@
                     <img src="./covers/soltryx/Instrumentals.jpg" alt="Capa Instrumentals" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>Instrumentals</h4>
-                        <p>Single • 2 faixas</p>
-                        <p class="release-date">5 Novembro 2024</p>
-                        <p>Single que introduziu Soltryx ao mundo.</p>
-                        <a href="https://open.spotify.com/album/7qCucEV9GQ3Lu6fItSwICE" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 2 <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateInstrumentals">5 Novembro 2024</p>
+                        <p data-i18n="trackDescInstrumentals">Single que introduziu Soltryx ao mundo.</p>
+                        <a href="https://open.spotify.com/album/7qCucEV9GQ3Lu6fItSwICE" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -502,7 +515,7 @@
     <a href="https://instagram.com/soltryx_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
     <a href="https://youtube.com/@soltryx" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
     <a href="https://open.spotify.com/artist/5x5RppM4rHf3Tsse5PfuUo" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-    <a href="mailto:northstudios@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    <a href="mailto:northstudiosbr@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
 </div>
         </div>
         <div class="footer-col">
@@ -524,7 +537,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p><span data-i18n="footerRights">© 2026 North Studios.</span> <a href="mailto:northstudios@gmail.com">northstudios@gmail.com</a></p>
+        <p><span data-i18n="footerRights">© 2026 North Studios.</span> <a href="mailto:northstudiosbr@gmail.com">northstudiosbr@gmail.com</a></p>
     </div>
 </footer>
 

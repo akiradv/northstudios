@@ -2,17 +2,6 @@
 // NORTH STUDIOS – SCRIPT UNIFICADO (v2)
 // Funciona em index.html, soltryx.html e orangeisle.html
 // =============================================
-
-// ---------- PRÉ-LOADER ----------
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        setTimeout(() => {
-            preloader.classList.add('hidden');
-        }, 1500);
-    }
-});
-
 // ---------- PARTÍCULAS COM PARALLAX ----------
 const particlesContainer = document.getElementById('particles');
 if (particlesContainer) {

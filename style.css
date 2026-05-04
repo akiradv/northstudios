@@ -82,6 +82,15 @@ body {
     transition: opacity 0.3s, transform 0.3s;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+}
 .back-to-top.visible {
     opacity: 1;
     transform: translateY(0);
@@ -381,13 +390,23 @@ nav.scrolled {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 2rem;
+    overflow: hidden;
 }
 .about-photo img {
     width: 250px;
     border-radius: 50%;
     border: 2px solid #333;
 }
-.about-text p { margin-bottom: 1rem; color: var(--text-secondary); }
+.about-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+.about-text p { 
+    margin-bottom: 1rem; color: var(--text-secondary); 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
 .about-stats {
     display: flex;
     gap: 2rem;
@@ -515,20 +534,6 @@ nav.scrolled {
     .release-cover iframe { height: 250px; }
 }
 
-.badge-latest {
-    display: inline-block;
-    background-color: #fff;
-    color: #000;
-    padding: 0.2rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-left: 0.8rem;
-    vertical-align: middle;
-}
-
 /* Seletor de idioma */
 .lang-switcher {
     position: fixed;
@@ -559,4 +564,33 @@ nav.scrolled {
     background: #fff;
     color: #000;
     border-color: #fff;
+}
+
+/* Badge padrão (Mais recente) */
+.badge-latest {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 0.8rem;
+    vertical-align: middle;
+}
+
+/* Badge "Em breve" (borda tracejada + animação de pulsar) */
+.badge-latest.coming-soon {
+    background: transparent;
+    border: 1px dashed #aaa;
+    color: #aaa;
+    animation: softPulse 2s infinite;
+}
+
+@keyframes softPulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
 }
