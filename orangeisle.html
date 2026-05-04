@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="Orange Isle - North Studios">
+    <meta property="og:description" content="Orange Isle, projeto de Akira Dev. Bossa nova e jazz introspectivo. Selo North Studios.">
+    <meta property="og:image" content="https://akiradv.github.io/northstudios/covers/orangeisle/exploration.jpg">
+    <meta property="og:url" content="https://akiradv.github.io/northstudios/orangeisle.html">
+    <meta property="og:type" content="website">
+    
     <title>Orange Isle | North Studios</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+<!-- Seletor de Idioma -->
+<div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn" onclick="changeLanguage('pt-br')" id="btn-pt">PT</button>
+    <button class="lang-btn" onclick="changeLanguage('en')" id="btn-en">EN</button>
+</div>
+
 <nav id="navbar">
     <div class="nav-logo">NORTH STUDIOS</div>
     <div class="nav-links" id="navLinks">
-        <a href="index.html" class="nav-link">Início</a>
-        <a href="#lancamento" class="nav-link">Lançamento</a>
-        <a href="#discografia" class="nav-link">Discografia</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-        <a href="#contato" class="nav-link">Contato</a>
+        <a href="index.html" class="nav-link" data-i18n="navHome">Início</a>
+        <a href="#lancamento" class="nav-link" data-i18n="navRelease">Lançamento</a>
+        <a href="#discografia" class="nav-link" data-i18n="navDiscography">Discografia</a>
+        <a href="#sobre" class="nav-link" data-i18n="navAbout">Sobre</a>
+        <a href="#contato" class="nav-link" data-i18n="navContact">Contato</a>
     </div>
     <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
         <i class="fas fa-bars"></i>
@@ -33,35 +47,35 @@
 
 <main class="content">
     <section id="lancamento" class="section">
-        <h2 class="section-title">Lançamento Recente</h2>
+        <h2 class="section-title" data-i18n="sectionRecent">Lançamento Recente</h2>
         <div class="release-card animate-on-scroll">
             <div class="release-cover">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/08TCozWpbDO49BPQB7gQ1E?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div class="release-info">
-                <h3 class="release-title">Exploration. (Feat. Soltryx)</h3>
-                <p class="release-date">Lançado em 24 Abril 2026 • Single • 1 faixa</p>
-                <p class="release-desc">Single de Debut de Orange Isle, música calma com estilos de bossa nova e jazz.</p>
+                <h3 class="release-title" data-i18n="releaseTitleOrange">Exploration. (Feat. Soltryx)</h3>
+                <p class="release-date" data-i18n="releaseDateOrange">Lançado em 24 Abril 2026 • Single • 1 faixa</p>
+                <p class="release-desc" data-i18n="releaseDescOrange">Single de Debut de Orange Isle, música calma com estilos de bossa nova e jazz.</p>
                 <div class="release-links">
-                    <a href="https://open.spotify.com/intl-pt/album/08TCozWpbDO49BPQB7gQ1E" target="_blank" class="btn btn-primary"><i class="fab fa-spotify"></i> Ouvir no Spotify</a>
+                    <a href="https://open.spotify.com/intl-pt/album/08TCozWpbDO49BPQB7gQ1E" target="_blank" class="btn btn-primary" data-i18n="listenSpotify"><i class="fab fa-spotify"></i> Ouvir no Spotify</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="discografia" class="section">
-        <h2 class="section-title">Discografia</h2>
+        <h2 class="section-title" data-i18n="sectionDiscography">Discografia</h2>
         <div class="timeline">
             <div class="timeline-item animate-on-scroll">
                 <div class="timeline-year">2026</div>
                 <div class="timeline-card" data-tilt>
                     <img src="covers/orangeisle/exploration.jpg" alt="Capa Exploration" loading="lazy">
                     <div class="timeline-card-info">
-                        <h4>Exploration <span class="badge-latest">Mais recente.</span></h4>
+                        <h4>Exploration <span class="badge-latest" data-i18n="badgeLatest">Mais recente.</span></h4>
                         <p>Single • 1 faixa</p>
                         <p class="release-date">24 Abril 2026</p>
                         <p>Bossa nova encontra jazz em uma faixa envolvente e cheia de harmonia.</p>
-                        <a href="https://open.spotify.com/intl-pt/album/08TCozWpbDO49BPQB7gQ1E" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> Ouvir</a>
+                        <a href="https://open.spotify.com/intl-pt/album/08TCozWpbDO49BPQB7gQ1E" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
                     </div>
                 </div>
             </div>
@@ -69,7 +83,7 @@
     </section>
 
     <section id="sobre" class="section">
-        <h2 class="section-title">Sobre Orange Isle</h2>
+        <h2 class="section-title" data-i18n="sectionAboutOrange">Sobre Orange Isle</h2>
         <div class="about-container animate-on-scroll">
             <div class="about-photo">
                 <img src="covers/orangeisle/orangelogo.png" alt="Orange Isle" loading="lazy">
@@ -86,19 +100,19 @@
     </section>
 
     <section id="contato" class="section">
-        <h2 class="section-title">Contato</h2>
+        <h2 class="section-title" data-i18n="sectionContact">Contato</h2>
         <form id="contactFormOrange" class="contact-form animate-on-scroll">
-            <p style="text-align:center; margin-bottom:1rem;">Entre em contato com Orange Isle.</p>
-            <div data-fs-success style="display:none; color: #fff; text-align:center; margin-bottom:1rem;">Mensagem enviada! 🚀</div>
+            <p style="text-align:center; margin-bottom:1rem;" data-i18n="contactIntroOrange">Entre em contato com Orange Isle.</p>
+            <div data-fs-success style="display:none; color: #fff; text-align:center; margin-bottom:1rem;" data-i18n="formSuccessOrange">Mensagem enviada! 🚀</div>
             <div data-fs-error style="display:none; color: #ff6b6b; text-align:center; margin-bottom:1rem;"></div>
 
             <!-- Campo oculto para identificar o artista -->
             <input type="hidden" name="artista" value="Orange Isle">
 
-            <div class="form-group"><label for="nome">Nome</label><input type="text" id="nome" name="nome" data-fs-field required></div>
-            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" data-fs-field required></div>
-            <div class="form-group"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" rows="5" data-fs-field required></textarea></div>
-            <button type="submit" class="btn btn-primary" data-fs-submit-btn><i class="fas fa-paper-plane"></i> Enviar</button>
+            <div class="form-group"><label for="nome" data-i18n="formName">Nome</label><input type="text" id="nome" name="nome" data-fs-field required></div>
+            <div class="form-group"><label for="email" data-i18n="formEmail">Email</label><input type="email" id="email" name="email" data-fs-field required></div>
+            <div class="form-group"><label for="mensagem" data-i18n="formMessage">Mensagem</label><textarea id="mensagem" name="mensagem" rows="5" data-fs-field required></textarea></div>
+            <button type="submit" class="btn btn-primary" data-fs-submit-btn data-i18n="formSubmit"><i class="fas fa-paper-plane"></i> Enviar</button>
         </form>
     </section>
 </main>
@@ -106,22 +120,55 @@
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-col">
-            <div class="footer-col">
-    <h3>Orange Isle</h3>
-    <p>Novos sentimentos.<br>Selo: North Studios</p>
-    <div class="social-links">
-        <a href="https://instagram.com/orangeisle__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://tiktok.com/@orangeisle" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://open.spotify.com/intl-pt/artist/6WeSB7YOopAp21kzvQDas7" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-        <a href="mailto:northstudios@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-    </div>
-</div></div>
-        <div class="footer-col"><h4>Links</h4><ul><li><a href="#lancamento">Lançamento</a></li><li><a href="#discografia">Discografia</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li></ul></div>
+            <h3>Orange Isle</h3>
+            <p data-i18n="footerTaglineOrange">Novos sentimentos.<br>Selo: North Studios</p>
+            <div class="social-links">
+                <a href="https://instagram.com/orangeisle__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@orangeisle" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://open.spotify.com/intl-pt/artist/6WeSB7YOopAp21kzvQDas7" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="mailto:northstudios@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4 data-i18n="footerLinks">Links</h4>
+            <ul>
+                <li><a href="#lancamento" data-i18n="navRelease">Lançamento</a></li>
+                <li><a href="#discografia" data-i18n="navDiscography">Discografia</a></li>
+                <li><a href="#sobre" data-i18n="navAbout">Sobre</a></li>
+                <li><a href="#contato" data-i18n="navContact">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 data-i18n="footerNewsletter">Newsletter</h4>
+            <p data-i18n="footerNewsletterText">Receba novidades por email.</p>
+            <form class="newsletter-form" action="#" method="POST">
+                <input type="email" placeholder="seu@email.com" required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2026 North Studios. <a href="mailto:northstudios@gmail.com">northstudios@gmail.com</a></p>
+        <p><span data-i18n="footerRights">© 2026 North Studios.</span> <a href="mailto:northstudios@gmail.com">northstudios@gmail.com</a></p>
     </div>
 </footer>
+
+<!-- Scripts de tradução -->
+<script src="lang/pt.js"></script>
+<script src="lang/en.js"></script>
+<script src="i18n.js"></script>
+
+<!-- Marca o idioma ativo no seletor -->
+<script>
+  (function() {
+    const currentLang = localStorage.getItem('i18n_lang') || 'pt-br';
+    const btnPT = document.getElementById('btn-pt');
+    const btnEN = document.getElementById('btn-en');
+    if (btnPT && btnEN) {
+      btnPT.classList.toggle('active', currentLang === 'pt-br');
+      btnEN.classList.toggle('active', currentLang === 'en');
+    }
+  })();
+</script>
 
 <script src="script.js"></script>
 <script>

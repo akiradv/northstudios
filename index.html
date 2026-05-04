@@ -86,34 +86,91 @@
             color: #aaa;
             text-decoration: none;
         }
+
+        /* Seletor de idioma */
+        .lang-switcher {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1001;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 0.3rem 0.7rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            border-color: #fff;
+        }
+        .lang-btn.active {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <h1>North Studios</h1>
-            <p class="subtitle">Selo Independente</p>
-        </div>
 
-        <div class="artists-grid">
-            <!-- Card do Soltryx -->
-            <a href="soltryx.html" class="artist-card">
-                <img src="covers/soltryx/soltryxlogo.png" alt="Soltryx" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=SOLTRYX'">
-                <h2>Soltryx</h2>
-                <p>Explorando novos universos sonoros através de beats eletrônicos e jazz.</p>
-            </a>
+<!-- Seletor de Idioma -->
+<div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn" onclick="changeLanguage('pt-br')" id="btn-pt">PT</button>
+    <button class="lang-btn" onclick="changeLanguage('en')" id="btn-en">EN</button>
+</div>
 
-            <!-- Card do Orange Isle -->
-            <a href="orangeisle.html" class="artist-card">
-                <img src="covers/orangeisle/orangelogo.png" alt="Orange Isle" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=ORANGE+ISLE'">
-                <h2>Orange Isle</h2>
-                <p>Novos sentimentos sonoros. Bossa nova e jazz introspectivo.</p>
-            </a>
-        </div>
-
-        <footer>
-            <p>© 2026 North Studios. <a href="mailto:northstudios@gmail.com">northstudios@gmail.com</a></p>
-        </footer>
+<div class="container">
+    <div class="logo">
+        <h1>North Studios</h1>
+        <p class="subtitle" data-i18n="hubSubtitle">Selo Independente</p>
     </div>
+
+    <div class="artists-grid">
+        <!-- Card do Soltryx -->
+        <a href="soltryx.html" class="artist-card">
+            <img src="covers/soltryx/Smooth-changes.jpg" alt="Soltryx" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=SOLTRYX'">
+            <h2>Soltryx</h2>
+            <p data-i18n="hubSoltryxDesc">Explorando novos universos sonoros através de beats eletrônicos e jazz.</p>
+        </a>
+
+        <!-- Card do Orange Isle -->
+        <a href="orangeisle.html" class="artist-card">
+            <img src="covers/orangeisle/exploration.jpg" alt="Orange Isle" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=ORANGE+ISLE'">
+            <h2>Orange Isle</h2>
+            <p data-i18n="hubOrangeDesc">Novos sentimentos sonoros. Bossa nova e jazz introspectivo.</p>
+        </a>
+    </div>
+
+    <footer>
+        <p>© 2026 North Studios. <a href="mailto:northstudios@gmail.com">northstudios@gmail.com</a></p>
+    </footer>
+</div>
+
+<!-- Scripts de tradução -->
+<script src="lang/pt.js"></script>
+<script src="lang/en.js"></script>
+<script src="i18n.js"></script>
+
+<!-- Marca o idioma ativo no seletor -->
+<script>
+  (function() {
+    const currentLang = localStorage.getItem('i18n_lang') || 'pt-br';
+    const btnPT = document.getElementById('btn-pt');
+    const btnEN = document.getElementById('btn-en');
+    if (btnPT && btnEN) {
+      btnPT.classList.toggle('active', currentLang === 'pt-br');
+      btnEN.classList.toggle('active', currentLang === 'en');
+    }
+  })();
+</script>
 </body>
 </html>
