@@ -106,6 +106,6 @@ window.I18N_TRANSLATIONS['en'] = {
 "badgeComingSoon": "Coming soon.",
 "tracksSoon": "?",
 "releaseDateOffCenter": "May 17, 2026",
-"trackDescOffCenter": "New Soltryx album coming May 2026.",
+"trackDescOffCenter": "New trap album by Soltryx, coming May 2026.",
 "comingSoon": "Coming soon"
 };
