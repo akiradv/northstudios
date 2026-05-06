@@ -594,3 +594,24 @@ nav.scrolled {
     50% { opacity: 1; }
     100% { opacity: 0.7; }
 }
+
+.release-date-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+.countdown-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #ddd;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.countdown-icon {
+    font-size: 0.9rem;
+    color: #aaa;
+    animation: softPulse 2s infinite;
+}

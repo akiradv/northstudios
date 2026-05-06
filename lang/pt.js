@@ -105,6 +105,6 @@ window.I18N_TRANSLATIONS['pt-br'] = {
 "badgeComingSoon": "Em breve.",
 "tracksSoon": "?",
 "releaseDateOffCenter": "17 Maio 2026",
-"trackDescOffCenter": "Novo álbum de Soltryx, previsto para maio de 2026.",
+"trackDescOffCenter": "Novo álbum de trap de Soltryx, previsto para maio de 2026.",
 "comingSoon": "Em breve"
 };

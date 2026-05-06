@@ -30,7 +30,6 @@
     }
   })();
 </script>
-
 <body>
 
 <!-- Seletor de Idioma -->
@@ -94,7 +93,7 @@
         <h2 class="section-title" data-i18n="sectionDiscography">Discografia</h2>
         <div class="timeline">
 
-            <!-- 2026 -->
+            <!-- OffCenter (futuro) -->
             <div class="timeline-item animate-on-scroll">
                 <div class="timeline-year">2026</div>
                 <div class="timeline-card" data-tilt>
@@ -102,7 +101,13 @@
                     <div class="timeline-card-info">
                         <h4>OffCenter <span class="badge-latest coming-soon" data-i18n="badgeComingSoon">Em breve.</span></h4>
                         <p><span data-i18n="releaseTypeAlbum">Álbum</span> • <span data-i18n="tracksSoon">?</span> <span data-i18n="tracksPlural">faixas</span></p>
-                        <p class="release-date" data-i18n="releaseDateOffCenter">17 Maio 2026</p>
+                        <div class="release-date-row">
+                            <p class="release-date" data-i18n="releaseDateOffCenter" style="margin-bottom:0;">17 Maio 2026</p>
+                            <span class="countdown-inline">
+                                <i class="fas fa-hourglass-half countdown-icon"></i>
+                                <span class="countdown-text" id="countdown-offcenter"></span>
+                            </span>
+                        </div>
                         <p data-i18n="trackDescOffCenter">Novo álbum de trap de Soltryx, previsto para maio de 2026.</p>
                         <span class="btn btn-small" style="opacity:0.5; cursor:default;"><i class="fas fa-clock"></i> <span data-i18n="comingSoon">Em breve</span></span>
                     </div>
@@ -559,6 +564,40 @@
       btnPT.classList.toggle('active', currentLang === 'pt-br');
       btnEN.classList.toggle('active', currentLang === 'en');
     }
+  })();
+</script>
+
+<script>
+  (function() {
+    // Data de lançamento: 17 de maio de 2026, 00:00:00 (horário local)
+    const launchDate = new Date(2026, 4, 17, 0, 0, 0).getTime(); // mês 4 = maio (0-indexado)
+
+    const countdownEl = document.getElementById('countdown-offcenter');
+    if (!countdownEl) return;
+
+    function updateCountdown() {
+      const now = Date.now();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        // Já passou da data; exibe mensagem de lançado
+        countdownEl.innerHTML = '<span data-i18n="alreadyReleased">Já disponível!</span>';
+        // Se quiser atualizar automaticamente o data-i18n, chame a função de tradução, mas aqui é opcional
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Monta a string do contador (sem tradução, apenas números e abreviações internacionais)
+      countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // Atualiza a cada segundo
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   })();
 </script>
 
