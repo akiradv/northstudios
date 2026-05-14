@@ -615,3 +615,21 @@ nav.scrolled {
     color: #aaa;
     animation: softPulse 2s infinite;
 }
+
+/* Botões de plataforma mais visíveis */
+.platform-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+.platform-btn {
+    border: 1px solid #555;
+    color: #ddd;
+    background: rgba(255, 255, 255, 0.03);
+}
+.platform-btn:hover {
+    border-color: #fff;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}

@@ -7,22 +7,30 @@
     <!-- Meta tags Open Graph -->
     <meta property="og:title" content="Orange Isle - North Studios">
     <meta property="og:description" content="Orange Isle, projeto de Akira Dev. Bossa nova e jazz introspectivo. Selo North Studios.">
-    <meta property="og:image" content="https://akiradv.github.io/northstudios/covers/orangeisle/exploration.jpg">
+    <meta property="og:image" content="https://akiradv.github.io/northstudios/covers/orangeisle/orangelogo.png">
     <meta property="og:url" content="https://akiradv.github.io/northstudios/orangeisle.html">
     <meta property="og:type" content="website">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/northstudios/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/northstudios/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/northstudios/favicon-16x16.png">
-    <title>Orange Isle | North Studios</title>
+    
+    <title>Orange Isle — North Studios</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
 
-<!-- BOTÃO VOLTAR AO TOPO -->
-<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
-    <i class="fas fa-rocket"></i>
-</button>
+<script>
+  (function() {
+    const currentLang = localStorage.getItem('i18n_lang') || 'pt-br';
+    const btnPT = document.getElementById('btn-pt');
+    const btnEN = document.getElementById('btn-en');
+    if (btnPT && btnEN) {
+      btnPT.classList.toggle('active', currentLang === 'pt-br');
+      btnEN.classList.toggle('active', currentLang === 'en');
+    }
+  })();
+</script>
+<body>
 
 <!-- Seletor de Idioma -->
 <div class="lang-switcher" id="langSwitcher">
@@ -30,7 +38,13 @@
     <button class="lang-btn" onclick="changeLanguage('en')" id="btn-en">EN</button>
 </div>
 
-<nav id="navbar">
+<!-- BOTÃO VOLTAR AO TOPO -->
+<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-rocket"></i>
+</button>
+
+<!-- Navegação fixa -->
+<nav id="navbar" role="navigation" aria-label="Navegação principal">
     <div class="nav-logo">NORTH STUDIOS</div>
     <div class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link" data-i18n="navHome">Início</a>
@@ -44,6 +58,7 @@
     </button>
 </nav>
 
+<!-- Header / Hero -->
 <header id="home" class="hero">
     <div class="particles" id="particles"></div>
     <div class="hero-content">
@@ -52,42 +67,72 @@
     </div>
 </header>
 
+<!-- Conteúdo Principal -->
 <main class="content">
+
+    <!-- Lançamento Recente em Destaque -->
     <section id="lancamento" class="section">
         <h2 class="section-title" data-i18n="sectionRecent">Lançamento Recente</h2>
         <div class="release-card animate-on-scroll">
             <div class="release-cover">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/08TCozWpbDO49BPQB7gQ1E?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7vYQyVxMReblXm7SLrg0fR?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div class="release-info">
-                <h3 class="release-title" data-i18n="releaseTitleOrange">Exploration. (Feat. Soltryx)</h3>
-                <p class="release-date" data-i18n="releaseDateOrange">Lançado em 24 Abril 2026 • Single • 1 faixa</p>
-                <p class="release-desc" data-i18n="releaseDescOrange">Single de Debut de Orange Isle, música calma com estilos de bossa nova e jazz.</p>
+                <h3 class="release-title" data-i18n="releaseTitleTwoDifferent">two different people. <span class="badge-latest" data-i18n="badgeLatest">Mais recente.</span></h3>
+                <p class="release-date" data-i18n="releaseDateTwoDifferent">Lançado em 8 Maio 2026 • Single • 1 faixa</p>
+                <p class="release-desc" data-i18n="releaseDescTwoDifferent">Segundo single de Orange Isle, trazendo a história de duas pessoas.</p>
                 <div class="release-links">
-                    <a href="https://open.spotify.com/intl-pt/album/08TCozWpbDO49BPQB7gQ1E" target="_blank" class="btn btn-primary" data-i18n="listenSpotify"><i class="fab fa-spotify"></i> Ouvir no Spotify</a>
+                    <a href="https://open.spotify.com/intl-pt/album/7vYQyVxMReblXm7SLrg0fR?si=iFkqPUjbSNKieyRd0DT7WA" target="_blank" class="btn btn-primary" data-i18n="listenSpotify"><i class="fab fa-spotify"></i> Ouvir no Spotify</a>
+                    <a href="https://tidal.com/album/524268847" target="_blank" class="btn btn-outline"><i class="fab fa-tidal"></i> Tidal</a>
+                    <a href="https://www.deezer.com/pt/album/981914111" target="_blank" class="btn btn-outline"><i class="fab fa-deezer"></i> Deezer</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Discografia / Linha do Tempo -->
     <section id="discografia" class="section">
         <h2 class="section-title" data-i18n="sectionDiscography">Discografia</h2>
         <div class="timeline">
+            <!-- two different people. (2026) -->
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-card" data-tilt>
+                    <img src="covers/orangeisle/twodifferentpeople.jpg" alt="Capa two different people." loading="lazy">
+                    <div class="timeline-card-info">
+                        <h4>two different people. <span class="badge-latest" data-i18n="badgeLatest">Mais recente.</span></h4>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 1 <span data-i18n="trackSingular">faixa</span></p>
+                        <p class="release-date" data-i18n="releaseDateTwoDifferentCard">8 Maio 2026</p>
+                        <p data-i18n="trackDescTwoDifferent">Segundo single de Orange Isle, trazendo a história de duas pessoas.</p>
+                        <div class="platform-links">
+                            <a href="https://open.spotify.com/intl-pt/album/7vYQyVxMReblXm7SLrg0fR?si=iFkqPUjbSNKieyRd0DT7WA" target="_blank" class="btn btn-small platform-btn" title="Spotify"><i class="fab fa-spotify"></i> Spotify</a>
+                            <a href="https://tidal.com/album/524268847" target="_blank" class="btn btn-small platform-btn" title="Tidal"><i class="fab fa-tidal"></i> Tidal</a>
+                            <a href="https://www.deezer.com/pt/album/981914111" target="_blank" class="btn btn-small platform-btn" title="Deezer"><i class="fab fa-deezer"></i> Deezer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exploration. (Feat. Soltryx) (2026) -->
             <div class="timeline-item animate-on-scroll">
                 <div class="timeline-year">2026</div>
                 <div class="timeline-card" data-tilt>
                     <img src="covers/orangeisle/exploration.jpg" alt="Capa Exploration" loading="lazy">
-                     <div class="timeline-card-info">
-    <h4>Exploration <span class="badge-latest" data-i18n="badgeLatest">Mais recente.</span></h4>
-    <p><span data-i18n="releaseTypeSingle">Single</span> • 1 <span data-i18n="trackSingular">faixa</span></p>
-    <p class="release-date" data-i18n="releaseDateOrangeCard">24 Abril 2026</p>
-    <p data-i18n="trackDescOrange">Bossa nova encontra jazz em uma faixa envolvente e cheia de harmonia.</p>
-    <a href="https://open.spotify.com/intl-pt/album/08TCozWpbDO49BPQB7gQ1E" target="_blank" class="btn btn-small"><i class="fab fa-spotify"></i> <span data-i18n="listenSpotify">Ouvir</span></a>
-</div>
+                    <div class="timeline-card-info">
+                        <h4>Exploration. (Feat. Soltryx)</h4>
+                        <p><span data-i18n="releaseTypeSingle">Single</span> • 1 <span data-i18n="trackSingular">faixa</span></p>
+                        <p class="release-date" data-i18n="releaseDateOrangeCard">24 Abril 2026</p>
+                        <p data-i18n="trackDescOrange">Bossa nova encontra jazz em uma faixa envolvente e cheia de harmonia.</p>
+                        <div class="platform-links">
+                            <a href="https://open.spotify.com/intl-pt/album/08TCozWpbDO49BPQB7gQ1E?si=Odk0q3HvRMiraN02ZJH6UA" target="_blank" class="btn btn-small platform-btn" title="Spotify"><i class="fab fa-spotify"></i> Spotify</a>
+                            <a href="https://music.apple.com/br/album/exploration-feat-soltryx-single/6768252789" target="_blank" class="btn btn-small platform-btn" title="Apple Music"><i class="fab fa-apple"></i> Apple Music</a>
+                            <a href="https://www.deezer.com/pt/album/970297831" target="_blank" class="btn btn-small platform-btn" title="Deezer"><i class="fab fa-deezer"></i> Deezer</a>
+                            <a href="https://tidal.com/album/519434688" target="_blank" class="btn btn-small platform-btn" title="Tidal"><i class="fab fa-tidal"></i> Tidal</a>
+                            <a href="https://music.amazon.com.br/albums/B0GYPBMH2B" target="_blank" class="btn btn-small platform-btn" title="Amazon Music"><i class="fab fa-amazon"></i> Amazon Music</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
     <section id="sobre" class="section">
         <h2 class="section-title" data-i18n="sectionAboutOrange">Sobre Orange Isle</h2>
@@ -113,7 +158,6 @@
             <div data-fs-success style="display:none; color: #fff; text-align:center; margin-bottom:1rem;" data-i18n="formSuccessOrange">Mensagem enviada! 🚀</div>
             <div data-fs-error style="display:none; color: #ff6b6b; text-align:center; margin-bottom:1rem;"></div>
 
-            <!-- Campo oculto para identificar o artista -->
             <input type="hidden" name="artista" value="Orange Isle">
 
             <div class="form-group"><label for="nome" data-i18n="formName">Nome</label><input type="text" id="nome" name="nome" data-fs-field required></div>
@@ -159,29 +203,15 @@
     </div>
 </footer>
 
-<!-- Scripts de tradução -->
 <script src="lang/pt.js"></script>
 <script src="lang/en.js"></script>
 <script src="i18n.js"></script>
-
-<!-- Marca o idioma ativo no seletor -->
-<script>
-  (function() {
-    const currentLang = localStorage.getItem('i18n_lang') || 'pt-br';
-    const btnPT = document.getElementById('btn-pt');
-    const btnEN = document.getElementById('btn-en');
-    if (btnPT && btnEN) {
-      btnPT.classList.toggle('active', currentLang === 'pt-br');
-      btnEN.classList.toggle('active', currentLang === 'en');
-    }
-  })();
-</script>
-
-<script src="script.js"></script>
 <script>
     window.formspree = window.formspree || function() { (formspree.q = formspree.q || []).push(arguments); };
     formspree('initForm', { formElement: '#contactFormOrange', formId: 'xnjlejev' });
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+<script src="script.js"></script>
 </body>
 </html>
