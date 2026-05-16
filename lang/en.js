@@ -107,5 +107,10 @@ window.I18N_TRANSLATIONS['en'] = {
 "tracksSoon": "?",
 "releaseDateOffCenter": "May 17, 2026",
 "trackDescOffCenter": "New trap album by Soltryx, coming May 2026.",
-"comingSoon": "Coming soon"
+"comingSoon": "Coming soon",
+"releaseTitleTwoDifferent": "two different people.",
+"releaseDateTwoDifferent": "Released on May 8, 2026 • Single • 1 track",
+"releaseDescTwoDifferent": "Second single by Orange Isle, telling the story of two people.",
+"releaseDateTwoDifferentCard": "May 8, 2026",
+"trackDescTwoDifferent": "Second single by Orange Isle, telling the story of two people."
 };

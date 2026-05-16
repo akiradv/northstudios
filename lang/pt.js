@@ -106,5 +106,10 @@ window.I18N_TRANSLATIONS['pt-br'] = {
 "tracksSoon": "?",
 "releaseDateOffCenter": "17 Maio 2026",
 "trackDescOffCenter": "Novo álbum de trap de Soltryx, previsto para maio de 2026.",
-"comingSoon": "Em breve"
+"comingSoon": "Em breve",
+"releaseTitleTwoDifferent": "two different people.",
+"releaseDateTwoDifferent": "Lançado em 8 Maio 2026 • Single • 1 faixa",
+"releaseDescTwoDifferent": "Segundo single de Orange Isle, trazendo a história de duas pessoas.",
+"releaseDateTwoDifferentCard": "8 Maio 2026",
+"trackDescTwoDifferent": "Segundo single de Orange Isle, trazendo a história de duas pessoas."
 };

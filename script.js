@@ -2,31 +2,6 @@
 // NORTH STUDIOS – SCRIPT UNIFICADO (v2)
 // Funciona em index.html, soltryx.html e orangeisle.html
 // =============================================
-// ---------- PARTÍCULAS COM PARALLAX ----------
-const particlesContainer = document.getElementById('particles');
-if (particlesContainer) {
-    const particleCount = 30;
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
-        particle.style.animationDelay = Math.random() * 10 + 's';
-        particlesContainer.appendChild(particle);
-    }
-    document.addEventListener('mousemove', (e) => {
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-        const particles = document.querySelectorAll('.particle');
-        particles.forEach(p => {
-            const moveX = (x - 0.5) * 20;
-            const moveY = (y - 0.5) * 20;
-            p.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        });
-    });
-}
-
 // ---------- EFEITO DE DIGITAÇÃO ----------
 const tagline = document.getElementById('tagline');
 if (tagline) {
