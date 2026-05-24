@@ -68,7 +68,11 @@
         el.innerHTML = dict[key];
       }
     });
+
     document.documentElement.setAttribute('lang', lang);
+
+    // Dispara evento para scripts externos (ex: tagline animada)
+    document.dispatchEvent(new CustomEvent('i18nLangChanged', { detail: { lang: lang } }));
   }
 
   function showBanner(availableLangs, currentLang, browserLang, translations) {

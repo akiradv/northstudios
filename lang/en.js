@@ -124,5 +124,20 @@ window.I18N_TRANSLATIONS['en'] = {
   "alreadyReleased": "Out now!",
   "formPlaceholderName": "Name",
   "formPlaceholderEmail": "Email",
-  "formPlaceholderMessage": "Message"
+  "formPlaceholderMessage": "Message",
+  "releaseTitleAdventures": "adventures in switzerland",
+  "releaseDateAdventures": "Released on May 24, 2026 • Single • 2 tracks",
+  "releaseDescAdventures": "Third single by Orange Isle, a sonic journey through the Swiss Alps.",
+  "releaseDateAdventuresCard": "May 24, 2026",
+  "trackDescAdventures": "Third single by Orange Isle, a sonic journey through the Swiss Alps.",
+  "soltryxTaglines": [
+  "Exploring new sonic universes.",
+  "Electronic music beyond the ordinary.",
+  "Sounds that transcend space.",
+  "North Studios • Independent"],
+  "orangeTaglines": [
+  "New sonic feelings.",
+  "Introspective bossa nova and jazz.",
+  "Melancholic soundscapes.",
+  "Beats that become vibes."]
 };

@@ -124,5 +124,20 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "alreadyReleased": "Já disponível!",
   "formPlaceholderName": "Nome",
   "formPlaceholderEmail": "Email",
-  "formPlaceholderMessage": "Mensagem"
+  "formPlaceholderMessage": "Mensagem",
+  "releaseTitleAdventures": "adventures in switzerland",
+  "releaseDateAdventures": "Lançado em 24 Maio 2026 • Single • 2 faixas",
+  "releaseDescAdventures": "Terceiro single de Orange Isle, uma viagem sonora pelos Alpes suíços.",
+  "releaseDateAdventuresCard": "24 Maio 2026",
+  "trackDescAdventures": "Terceiro single de Orange Isle, uma viagem sonora pelos Alpes suíços.",
+  "soltryxTaglines": [
+  "Explorando novos universos sonoros.",
+  "Música eletrônica além do comum.",
+  "Sons que transcendem o espaço.",
+  "North Studios • Independente"],
+  "orangeTaglines": [
+  "Novos sentimentos sonoros.",
+  "Bossa nova e jazz introspectivo.",
+  "Paisagens sonoras melancólicas.",
+  "Beats que viram vibes."]
 };
