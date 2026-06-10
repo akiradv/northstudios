@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="Disk - North Studios">
+    <meta property="og:description" content="Disk, projeto musical da North Studios. Soundtracks, experimentações e batidas eletrônicas.">
+    <meta property="og:image" content="https://akiradv.github.io/northstudios/covers/disk/holldoneechoes.jpg">
+    <meta property="og:url" content="https://akiradv.github.io/northstudios/disk.html">
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/northstudios/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/northstudios/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/northstudios/favicon-16x16.png">
+    
+    <title>Disk — North Studios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Seletor de Idioma -->
+<div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn" onclick="changeLanguage('pt-br')" id="btn-pt">PT</button>
+    <button class="lang-btn" onclick="changeLanguage('en')" id="btn-en">EN</button>
+</div>
+
+<!-- BOTÃO VOLTAR AO TOPO -->
+<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-rocket"></i>
+</button>
+
+<!-- Navegação fixa -->
+<nav id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="nav-logo">NORTH STUDIOS</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-i18n="navHome">Início</a>
+        <a href="#lancamento" class="nav-link" data-i18n="navRelease">Lançamento</a>
+        <a href="#discografia" class="nav-link" data-i18n="navDiscography">Discografia</a>
+        <a href="#sobre" class="nav-link" data-i18n="navAbout">Sobre</a>
+        <a href="#contato" class="nav-link" data-i18n="navContact">Contato</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- Header / Hero -->
+<header id="home" class="hero disk-hero">
+    <div class="hero-content">
+        <h1 class="logo">DISK</h1>
+        <p class="tagline" id="tagline"></p>
+    </div>
+</header>
+
+<!-- Conteúdo Principal -->
+<main class="content disk-main">
+
+    <!-- Lançamento Recente em Destaque (Em breve) -->
+    <section id="lancamento" class="section">
+        <h2 class="section-title" data-i18n="sectionRecent">Lançamento Recente</h2>
+        <div class="release-card animate-on-scroll">
+            <div class="release-cover">
+                <img src="covers/disk/holldoneechoes.jpg" alt="Capa HOLLDONE:ECHOES" style="width:100%; border-radius:12px;">
+            </div>
+            <div class="release-info">
+                <h3 class="release-title">HOLLDONE:ECHOES <span class="badge-latest coming-soon" data-i18n="badgeComingSoon">Em breve.</span></h3>
+                <p class="release-date"><span data-i18n="releaseTypeAlbum">Álbum</span> • <span data-i18n="tracksSoon">?</span> <span data-i18n="tracksPlural">faixas</span></p>
+                <p class="release-desc" data-i18n="trackDescHolldoneEchoes">HOLLDONE: ECHOES é a trilha sonora oficial de Holldone, produzida por Soltryx em colaboração com Disk. Inspirado nas demos de Holldone: DanceHall, o álbum explora house, música eletrônica e elementos experimentais para construir a identidade sonora do universo de Holldone. O projeto mistura batidas energéticas, atmosferas noturnas e sons distorcidos que remetem a pistas de dança vazias, viagens noturnas e memórias fragmentadas. Muitas faixas possuem versões "Side B", criadas como extensões experimentais das músicas originais.</p>
+                <div class="release-links">
+                    <span class="btn btn-primary" style="opacity:0.5; cursor:default;"><i class="fas fa-clock"></i> <span data-i18n="comingSoon">Em breve</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discografia / Linha do Tempo -->
+    <section id="discografia" class="section">
+        <h2 class="section-title" data-i18n="sectionDiscography">Discografia</h2>
+        <div class="timeline">
+            <!-- HOLLDONE:ECHOES (Em breve) -->
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-card" data-tilt>
+                    <img src="covers/disk/holldoneechoes.jpg" alt="Capa HOLLDONE:ECHOES" loading="lazy">
+                    <div class="timeline-card-info">
+                        <h4>HOLLDONE:ECHOES <span class="badge-latest coming-soon" data-i18n="badgeComingSoon">Em breve.</span></h4>
+                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • <span data-i18n="tracksSoon">?</span> <span data-i18n="tracksPlural">faixas</span></p>
+                        <p class="release-date" data-i18n="releaseDateSoon">Em breve</p>
+                        <p data-i18n="trackDescHolldoneEchoesShort">Trilha sonora oficial de Holldone, em parceria com Soltryx. House, eletrônica e experimental.</p>
+                        <span class="btn btn-small" style="opacity:0.5; cursor:default;"><i class="fas fa-clock"></i> <span data-i18n="comingSoon">Em breve</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section">
+        <h2 class="section-title" data-i18n="sectionAboutDisk">Sobre Disk</h2>
+        <div class="about-container animate-on-scroll">
+            <div class="about-photo">
+                <img src="covers/disk/holldoneechoes.jpg" alt="Disk" loading="lazy">
+            </div>
+            <div class="about-text">
+                <p data-i18n-html="aboutDisk1">Disk é o projeto musical focado em soundtracks e experimentações eletrônicas. Com uma abordagem cinematográfica, suas composições exploram atmosferas imersivas e narrativas sonoras.</p>
+                <p data-i18n-html="aboutDisk2">Colaborador frequente de <strong>Soltryx</strong>, Disk traz uma identidade única ao universo de Holldone, misturando house, eletrônica e elementos experimentais.</p>
+                <div class="about-stats">
+                    <div><span>2026</span> Estréia</div>
+                    <div><span>North Studios</span> Selo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+        <h2 class="section-title" data-i18n="sectionContact">Contato</h2>
+        <form id="contactFormDisk" class="contact-form animate-on-scroll">
+            <p style="text-align:center; margin-bottom:1rem;" data-i18n="contactIntroDisk">Entre em contato com Disk.</p>
+            <div data-fs-success style="display:none; color: #fff; text-align:center; margin-bottom:1rem;" data-i18n="formSuccessDisk">Mensagem enviada! 🚀</div>
+            <div data-fs-error style="display:none; color: #ff6b6b; text-align:center; margin-bottom:1rem;"></div>
+
+            <input type="hidden" name="artista" value="Disk">
+
+            <div class="form-group"><label for="nome" data-i18n="formName">Nome</label><input type="text" id="nome" name="nome" data-fs-field required></div>
+            <div class="form-group"><label for="email" data-i18n="formEmail">Email</label><input type="email" id="email" name="email" data-fs-field required></div>
+            <div class="form-group"><label for="mensagem" data-i18n="formMessage">Mensagem</label><textarea id="mensagem" name="mensagem" rows="5" data-fs-field required></textarea></div>
+            <button type="submit" class="btn btn-primary" data-fs-submit-btn data-i18n="formSubmit"><i class="fas fa-paper-plane"></i> Enviar</button>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>Disk</h3>
+            <p data-i18n="footerTaglineDisk">Soundtracks e experimentações.<br>Selo: North Studios</p>
+            <div class="social-links">
+                <a href="mailto:northstudiosbr@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4 data-i18n="footerLinks">Links</h4>
+            <ul>
+                <li><a href="#lancamento" data-i18n="navRelease">Lançamento</a></li>
+                <li><a href="#discografia" data-i18n="navDiscography">Discografia</a></li>
+                <li><a href="#sobre" data-i18n="navAbout">Sobre</a></li>
+                <li><a href="#contato" data-i18n="navContact">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 data-i18n="footerNewsletter">Newsletter</h4>
+            <p data-i18n="footerNewsletterText">Receba novidades por email.</p>
+            <form class="newsletter-form" action="#" method="POST">
+                <input type="email" placeholder="seu@email.com" required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p><span data-i18n="footerRights">© 2026 North Studios.</span> <a href="mailto:northstudiosbr@gmail.com">northstudiosbr@gmail.com</a></p>
+    </div>
+</footer>
+
+<script src="lang/pt.js?v=7"></script>
+<script src="lang/en.js?v=7"></script>
+<script src="i18n.js"></script>
+
+<script>
+  (function() {
+    const currentLang = localStorage.getItem('i18n_lang') || 'pt-br';
+    const btnPT = document.getElementById('btn-pt');
+    const btnEN = document.getElementById('btn-en');
+    if (btnPT && btnEN) {
+      btnPT.classList.toggle('active', currentLang === 'pt-br');
+      btnEN.classList.toggle('active', currentLang === 'en');
+    }
+  })();
+</script>
+<script>
+    window.formspree = window.formspree || function() { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contactFormDisk', formId: 'xnjlejev' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+<script src="script.js"></script>
+</body>
+</html>

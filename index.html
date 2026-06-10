@@ -339,6 +339,11 @@
             <h2>Orange Isle</h2>
             <p data-i18n="hubOrangeDesc">Novos sentimentos sonoros. Bossa nova e jazz introspectivo.</p>
         </a>
+        <a href="disk.html" class="artist-card">
+            <img src="covers/disk/holldoneechoes.jpg" alt="Disk" onerror="this.src='https://via.placeholder.com/200x200/222/fff?text=DISK'">
+            <h2>Disk</h2>
+            <p data-i18n="hubDiskDesc">Soundtracks, experimentações e batidas eletrônicas.</p>
+        </a>
     </div>
 
      <div class="contact-section">
@@ -373,8 +378,8 @@
     </footer>
 </div>
 
-<script src="lang/pt.js?v=4"></script>
-<script src="lang/en.js?v=4"></script>
+<script src="lang/pt.js?v=7"></script>
+<script src="lang/en.js?v=7"></script>
 <script src="i18n.js"></script>
 
 <script>
@@ -398,7 +403,6 @@
     contactFormHub.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Desabilita o botão e mostra "Enviando..."
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
         errorMsg.style.display = 'none';
@@ -414,12 +418,10 @@
             });
 
             if (response.ok) {
-                // Sucesso!
                 successMsg.style.display = 'block';
                 contactFormHub.reset();
                 submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> <span data-i18n="hubContactBtn">Falar comigo</span>';
             } else {
-                // Erro
                 errorMsg.textContent = 'Erro ao enviar. Tente novamente.';
                 errorMsg.style.display = 'block';
             }

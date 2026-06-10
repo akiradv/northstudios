@@ -139,5 +139,18 @@ window.I18N_TRANSLATIONS['en'] = {
   "New sonic feelings.",
   "Introspective bossa nova and jazz.",
   "Melancholic soundscapes.",
-  "Beats that become vibes."]
+  "Beats that become vibes."],
+  "sectionAboutDisk": "About Disk",
+  "contactIntroDisk": "Get in touch with Disk.",
+  "formSuccessDisk": "Message sent! 🚀",
+  "footerTaglineDisk": "Soundtracks and experimentations.",
+  "aboutDisk1": "Disk is a musical project focused on soundtracks and electronic experimentations. With a cinematic approach, his compositions explore immersive atmospheres and sonic narratives.",
+  "aboutDisk2": "A frequent collaborator of <strong>Soltryx</strong>, Disk brings a unique identity to the Holldone universe, mixing house, electronic and experimental elements.",
+  "trackDescHolldoneEchoes": "HOLLDONE: ECHOES is the official Holldone soundtrack, produced by Soltryx in collaboration with Disk. Inspired by the Holldone: DanceHall demos, the album explores house, electronic music and experimental elements to build the sonic identity of the Holldone universe. The project mixes energetic beats, nighttime atmospheres and distorted sounds evoking empty dance floors, late-night trips and fragmented memories. Many tracks feature \"Side B\" versions, created as experimental extensions of the original songs.",
+  "trackDescHolldoneEchoesShort": "Official Holldone soundtrack, in partnership with Soltryx. House, electronic and experimental.",
+  "releaseDateSoon": "Coming soon",
+  "diskTaglines": [
+  "Soundtracks and experimentations.",
+  "Beats that tell stories.",
+  "Holldone universe expanding."]
 };

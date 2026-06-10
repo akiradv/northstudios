@@ -23,9 +23,7 @@ Atualmente, nossa banca conta com **2 artistas**:
 **Soltryx:** Combinando elementos eletrônicos com influências de diversos gêneros, cada faixa busca criar atmosferas imersivas e levar o ouvinte a uma jornada única através da energia e experimentação sonora.
 
 **Orange Isle:** Nascido da vontade de dar vida a beats que estavam soltos pelo YouTube, o objetivo é simples: criar vibes. Cada faixa é escolhida a dedo, recebendo um nome e uma capa com os quais as pessoas possam se identificar, e então é lançada nas plataformas para que todos possam ouvir. Todas as músicas são **free for profit**, o que significa que podem ser usadas gratuitamente em projetos com até 5 mil streams acima disso, é necessário adquirir uma licença. Os créditos de cada produtor são devidamente colocados nas faixas (sem uso de Content ID). Se você é produtor e não gostou do uso da sua música, ou quer que ela seja removida, o contato é pelo Instagram: **@orangeisle__**.
-
 *Novos artistas podem ser adicionados facilmente — a estrutura já é escalável.*
-
 ---
 
 ## ✨ Funcionalidades
