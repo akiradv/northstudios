@@ -50,6 +50,7 @@ window.I18N_TRANSLATIONS['en'] = {
   "hubSubtitle": "Independent Label",
   "hubSoltryxDesc": "Exploring new sonic universes through electronic beats and jazz.",
   "hubOrangeDesc": "New sonic feelings. Introspective bossa nova and jazz.",
+  "hubDiskDesc": "North Studios artist. First release coming soon.",
   "releaseDateOrangeCard": "April 24, 2026",
   "trackDescOrange": "Bossa nova meets jazz in a captivating track full of harmony.",
   "trackSingular": "track",

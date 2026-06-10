@@ -3,27 +3,35 @@
 > Site oficial da **North Studios**, selo independente criado por Akira Dev.  
 > Vitrine dos nossos artistas, lançamentos e porta de entrada para novos talentos.
 
-🌍 **Site:** [northstudiosbr.qzz.io](https://www.northstudiosbr.qzz.io)  
-🔗 **Github:** [akiradv.github.io/northstudios](https://akiradv.github.io/northstudios)
+🌍 **Acesse:** [akiradv.github.io/northstudios](https://akiradv.github.io/northstudios)
 
 ---
 
 ## 🎤 Artistas
 
 O site é estruturado como um hub, com páginas dedicadas para cada artista.  
-Atualmente, nossa banca conta com **2 artistas**:
+Atualmente, nossa banca conta com **3 artistas**:
 
 | Artista | Página | Estilo |
 |---------|--------|--------|
 | **Soltryx** | [`soltryx.html`](soltryx.html) | Eletrônico, jazz, trap, experimental |
 | **Orange Isle** | [`orangeisle.html`](orangeisle.html) | Bossa nova, jazz, lo‑fi, introspectivo |
+| **Disk** | [`disk.html`](disk.html) | Em breve |
 
 ### Sobre os artistas
 
-**Soltryx:** Combinando elementos eletrônicos com influências de diversos gêneros, cada faixa busca criar atmosferas imersivas e levar o ouvinte a uma jornada única através da energia e experimentação sonora.
+**Soltryx:** Projeto musical de Akiradv. Combinando elementos eletrônicos com influências de diversos gêneros, cada faixa busca criar atmosferas imersivas e levar o ouvinte a uma jornada única através da energia e experimentação sonora.
 
-**Orange Isle:** Nascido da vontade de dar vida a beats que estavam soltos pelo YouTube, o objetivo é simples: criar vibes. Cada faixa é escolhida a dedo, recebendo um nome e uma capa com os quais as pessoas possam se identificar, e então é lançada nas plataformas para que todos possam ouvir. Todas as músicas são **free for profit**, o que significa que podem ser usadas gratuitamente em projetos com até 5 mil streams acima disso, é necessário adquirir uma licença. Os créditos de cada produtor são devidamente colocados nas faixas (sem uso de Content ID). Se você é produtor e não gostou do uso da sua música, ou quer que ela seja removida, o contato é pelo Instagram: **@orangeisle__**.
+**Orange Isle:** Nascido da vontade de dar vida a beats que estavam soltos pelo YouTube, o objetivo é simples: criar vibes. Cada faixa é escolhida a dedo e lançada nas plataformas. Todas as músicas são **free for profit** (até 5 mil streams). Créditos de cada produtor são devidamente colocados nas faixas.
+
+**Disk:** Artista da North Studios. Seu primeiro lançamento, HOLLDONE:ECHOES (em parceria com Soltryx), está previsto para breve.
+
+### Próximo lançamento
+
+**HOLLDONE:ECHOES** — Trilha sonora oficial de Holldone, produzida por Soltryx em colaboração com Disk. House, música eletrônica e elementos experimentais. Em breve.
+
 *Novos artistas podem ser adicionados facilmente — a estrutura já é escalável.*
+
 ---
 
 ## ✨ Funcionalidades
@@ -36,10 +44,14 @@ Atualmente, nossa banca conta com **2 artistas**:
   - Seção "Sobre" com a história do artista
   - Formulário de contato funcional
 - **Sistema de tradução** (Português / Inglês) com detecção automática do idioma do visitante
+- **Taglines animadas** com efeito de digitação e rodízio de frases exclusivas para cada artista
 - **Formulário de contato** no hub para novos artistas (envio via Formspree)
 - **Página de agradecimento** após envio do formulário
-- **Design responsivo** (funciona em celular, tablet e desktop)
+- **Design responsivo** otimizado para mobile, tablet e desktop
+- **Navbar profissional** com efeito de scroll e menu mobile com blur
 - **Contador regressivo** para lançamentos futuros
+- **Metadados Open Graph** para compartilhamento em redes sociais (WhatsApp, Discord, etc.)
+- **Favicon e ícones** personalizados para cada dispositivo
 
 ---
 
@@ -52,29 +64,33 @@ Atualmente, nossa banca conta com **2 artistas**:
 - **Fontes:** [Google Fonts](https://fonts.google.com/) (Bebas Neue + Segoe UI)
 - **Hospedagem:** GitHub Pages
 - **CDN / Segurança:** Cloudflare (SSL/TLS e proxy)
-- **Domínio:** DigitalPlat
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-```northstudios/
+```
+northstudios/
 ├── index.html              # Hub principal da distribuidora
 ├── soltryx.html            # Página do artista Soltryx
 ├── orangeisle.html         # Página do artista Orange Isle
+├── disk.html               # Página do artista Disk
 ├── thanks.html             # Página de agradecimento (pós-formulário)
 ├── style.css               # Estilos globais
-├── script.js               # JavaScript global (partículas, menu, tilt, etc.)
+├── script.js               # JavaScript global (navbar, tilt, taglines, etc.)
 ├── i18n.js                 # Motor do sistema de tradução
 ├── lang/
 │   ├── pt.js               # Traduções em português
 │   └── en.js               # Traduções em inglês
 ├── covers/
 │   ├── soltryx/            # Capas dos lançamentos do Soltryx
-│   └── orangeisle/         # Capas dos lançamentos do Orange Isle
+│   ├── orangeisle/         # Capas dos lançamentos do Orange Isle
+│   └── disk/               # Capas dos lançamentos do Disk
 └── favicon/
     └── northstudios/       # Ícones e favicons
 ```
+
+---
 
 ## 📬 Contato
 
@@ -82,7 +98,7 @@ Quer lançar sua música pela North Studios? Entre em contato que a gente conver
 Sempre fazemos descontos bons pra quem tá começando.
 
 📧 **E-mail:** [northstudiosbr@gmail.com](mailto:northstudiosbr@gmail.com)  
-🌐 **Site:** [northstudiosbr.qzz.io](https://www.northstudiosbr.qzz.io)
+🌐 **Site:** [akiradv.github.io/northstudios](https://akiradv.github.io/northstudios)
 
 ---
 

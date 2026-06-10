@@ -50,6 +50,7 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "hubSubtitle": "Selo Independente",
   "hubSoltryxDesc": "Explorando novos universos sonoros através de beats eletrônicos e jazz.",
   "hubOrangeDesc": "Novos sentimentos sonoros. Bossa nova e jazz introspectivo.",
+  "hubDiskDesc": "Artista da North Studios. Primeiro lançamento em breve.",
   "releaseDateOrangeCard": "24 Abril 2026",
   "trackDescOrange": "Bossa nova encontra jazz em uma faixa envolvente e cheia de harmonia.",
   "releaseDatePrettyVacation": "10 abril 2026",
