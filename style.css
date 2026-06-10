@@ -278,22 +278,27 @@ nav.scrolled {
 }
 
 /* ============================================
-   DISK – Tema Roxo Temporário
+   DISK – Tema Azul Oficial (#3B58B6)
    ============================================ */
 .disk-hero {
-    background: radial-gradient(ellipse at 50% 40%, #0f0a14 0%, #000000 70%);
+    background: radial-gradient(ellipse at 50% 40%, #0a0e1a 0%, #000000 70%);
     position: relative;
 }
 .disk-hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(130, 80, 200, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(59, 88, 182, 0.06) 0%, transparent 70%);
     pointer-events: none;
 }
 .disk-hero .logo {
     font-size: clamp(3rem, 12vw, 6rem);
     letter-spacing: 6px;
+}
+.disk-main {
+    background: linear-gradient(to bottom, #080a10 0%, #000000 30%);
+    margin-top: 0;
+    padding-top: 3rem;
 }
 
 /* ===== SEÇÕES GERAIS ===== */
