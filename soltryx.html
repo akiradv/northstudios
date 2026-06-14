@@ -92,17 +92,23 @@
         <h2 class="section-title" data-i18n="sectionDiscography">Discografia</h2>
         <div class="timeline">
 
-            <!-- HOLLDONE:ECHOES (Em breve - parceria com Disk) -->
+            <!-- HOLLDONE:ECHOES (parceria com Disk) -->
             <div class="timeline-item animate-on-scroll">
                 <div class="timeline-year">2026</div>
                 <div class="timeline-card" data-tilt>
                     <img src="./covers/soltryx/holldoneechoes.jpg" alt="Capa HOLLDONE:ECHOES" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>HOLLDONE:ECHOES <span class="badge-latest coming-soon" data-i18n="badgeComingSoon">Em breve.</span></h4>
-                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • <span data-i18n="tracksSoon">?</span> <span data-i18n="tracksPlural">faixas</span></p>
-                        <p class="release-date" data-i18n="releaseDateSoon">Em breve</p>
+                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • 18 <span data-i18n="tracksPlural">faixas</span></p>
+                        <div class="release-date-row">
+                            <p class="release-date" data-i18n="releaseDateHolldoneEchoes" style="margin-bottom:0;">27 Junho 2026</p>
+                            <span class="countdown-inline">
+                                <i class="fas fa-hourglass-half countdown-icon"></i>
+                                <span class="countdown-text" id="countdown-holldone"></span>
+                            </span>
+                        </div>
                         <p data-i18n="trackDescHolldoneEchoesShort">Trilha sonora oficial de Holldone, em parceria com Disk. House, eletrônica e experimental.</p>
-                        <span class="btn btn-small" style="opacity:0.5; cursor:default;"><i class="fas fa-clock"></i> <span data-i18n="comingSoon">Em breve</span></span>
+                        <a href="https://band.link/holldoneechoes" target="_blank" class="btn btn-small"><i class="fas fa-link"></i> <span data-i18n="preSave">Pré-save</span></a>
                     </div>
                 </div>
             </div>
@@ -551,9 +557,9 @@
         <p><span data-i18n="footerRights">© 2026 North Studios.</span> <a href="mailto:northstudiosbr@gmail.com">northstudiosbr@gmail.com</a></p>
     </div>
 </footer>
-<script src="lang/pt.js?v=7"></script>
-<script src="lang/en.js?v=7"></script>
-<script src="script.js?v=3"></script>
+<script src="lang/pt.js?v=8"></script>
+<script src="lang/en.js?v=8"></script>
+<script src="script.js?v=4"></script>
 <script src="i18n.js"></script>
 <script>
     window.formspree = window.formspree || function() { (formspree.q = formspree.q || []).push(arguments); };
@@ -573,5 +579,41 @@
   })();
 </script>
 <script src="script.js"></script>
+<script>
+  (function() {
+    const launchDate = new Date(2026, 5, 27, 0, 0, 0).getTime(); // 27 Junho 2026 (mês 5 = junho, 0-indexado)
+
+    // Para o Soltryx
+    const countdownEl = document.getElementById('countdown-holldone');
+    // Para o Disk
+    const countdownDiskEl = document.getElementById('countdown-holldone-disk');
+
+    function updateCountdown(el) {
+      if (!el) return;
+      const now = Date.now();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        el.textContent = 'Já disponível!';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      el.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown(countdownEl);
+    updateCountdown(countdownDiskEl);
+    setInterval(() => {
+      updateCountdown(countdownEl);
+      updateCountdown(countdownDiskEl);
+    }, 1000);
+  })();
+</script>
+
 </body>
 </html>

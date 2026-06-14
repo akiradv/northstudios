@@ -67,10 +67,10 @@
             </div>
             <div class="release-info">
                 <h3 class="release-title">HOLLDONE:ECHOES <span class="badge-latest coming-soon" data-i18n="badgeComingSoon">Em breve.</span></h3>
-                <p class="release-date"><span data-i18n="releaseTypeAlbum">Álbum</span> • <span data-i18n="tracksSoon">?</span> <span data-i18n="tracksPlural">faixas</span></p>
+                <p class="release-date"><span data-i18n="releaseTypeAlbum">Álbum</span> • 18 <span data-i18n="tracksPlural">faixas</span></p>
                 <p class="release-desc" data-i18n="trackDescHolldoneEchoes">HOLLDONE: ECHOES é a trilha sonora oficial de Holldone, produzida por Soltryx em colaboração com Disk. Inspirado nas demos de Holldone: DanceHall, o álbum explora house, música eletrônica e elementos experimentais para construir a identidade sonora do universo de Holldone. O projeto mistura batidas energéticas, atmosferas noturnas e sons distorcidos que remetem a pistas de dança vazias, viagens noturnas e memórias fragmentadas. Muitas faixas possuem versões "Side B", criadas como extensões experimentais das músicas originais.</p>
                 <div class="release-links">
-                    <span class="btn btn-primary" style="opacity:0.5; cursor:default;"><i class="fas fa-clock"></i> <span data-i18n="comingSoon">Em breve</span></span>
+                    <a href="https://band.link/holldoneechoes" target="_blank" class="btn btn-primary"><i class="fas fa-link"></i> <span data-i18n="preSave">Pré-save</span></a>
                 </div>
             </div>
         </div>
@@ -80,17 +80,23 @@
     <section id="discografia" class="section">
         <h2 class="section-title" data-i18n="sectionDiscography">Discografia</h2>
         <div class="timeline">
-            <!-- HOLLDONE:ECHOES (Em breve) -->
+            <!-- HOLLDONE:ECHOES -->
             <div class="timeline-item animate-on-scroll">
                 <div class="timeline-year">2026</div>
                 <div class="timeline-card" data-tilt>
                     <img src="covers/disk/holldoneechoes.jpg" alt="Capa HOLLDONE:ECHOES" loading="lazy">
                     <div class="timeline-card-info">
                         <h4>HOLLDONE:ECHOES <span class="badge-latest coming-soon" data-i18n="badgeComingSoon">Em breve.</span></h4>
-                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • <span data-i18n="tracksSoon">?</span> <span data-i18n="tracksPlural">faixas</span></p>
-                        <p class="release-date" data-i18n="releaseDateSoon">Em breve</p>
+                        <p><span data-i18n="releaseTypeAlbum">Álbum</span> • 18 <span data-i18n="tracksPlural">faixas</span></p>
+                        <div class="release-date-row">
+                            <p class="release-date" data-i18n="releaseDateHolldoneEchoes" style="margin-bottom:0;">27 Junho 2026</p>
+                            <span class="countdown-inline">
+                                <i class="fas fa-hourglass-half countdown-icon"></i>
+                                <span class="countdown-text" id="countdown-holldone-disk"></span>
+                            </span>
+                        </div>
                         <p data-i18n="trackDescHolldoneEchoesShort">Trilha sonora oficial de Holldone, em parceria com Soltryx. House, eletrônica e experimental.</p>
-                        <span class="btn btn-small" style="opacity:0.5; cursor:default;"><i class="fas fa-clock"></i> <span data-i18n="comingSoon">Em breve</span></span>
+                        <a href="https://band.link/holldoneechoes" target="_blank" class="btn btn-small"><i class="fas fa-link"></i> <span data-i18n="preSave">Pré-save</span></a>
                     </div>
                 </div>
             </div>
@@ -165,8 +171,8 @@
     </div>
 </footer>
 
-<script src="lang/pt.js?v=7"></script>
-<script src="lang/en.js?v=7"></script>
+<script src="lang/pt.js?v=8"></script>
+<script src="lang/en.js?v=8"></script>
 <script src="i18n.js"></script>
 
 <script>
@@ -187,5 +193,41 @@
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 <script src="script.js"></script>
+
+<script>
+  (function() {
+    const launchDate = new Date(2026, 5, 27, 0, 0, 0).getTime(); // 27 Junho 2026 (mês 5 = junho, 0-indexado)
+
+    // Para o Soltryx
+    const countdownEl = document.getElementById('countdown-holldone');
+    // Para o Disk
+    const countdownDiskEl = document.getElementById('countdown-holldone-disk');
+
+    function updateCountdown(el) {
+      if (!el) return;
+      const now = Date.now();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        el.textContent = 'Já disponível!';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      el.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown(countdownEl);
+    updateCountdown(countdownDiskEl);
+    setInterval(() => {
+      updateCountdown(countdownEl);
+      updateCountdown(countdownDiskEl);
+    }, 1000);
+  })();
+</script>
 </body>
 </html>

@@ -153,5 +153,7 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "diskTaglines": [
   "Soundtracks e experimentações.",
   "Batidas que contam histórias.",
-  "Universo Holldone em expansão."]
+  "Universo Holldone em expansão."],
+  "releaseDateHolldoneEchoes": "27 Junho 2026",
+  "preSave": "Pré-save"
 };

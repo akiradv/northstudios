@@ -153,5 +153,7 @@ window.I18N_TRANSLATIONS['en'] = {
   "diskTaglines": [
   "Soundtracks and experimentations.",
   "Beats that tell stories.",
-  "Holldone universe expanding."]
+  "Holldone universe expanding."],
+  "releaseDateHolldoneEchoes": "June 27, 2026",
+  "preSave": "Pre-save"
 };
