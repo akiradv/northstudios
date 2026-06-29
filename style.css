@@ -533,14 +533,18 @@ nav.scrolled {
     border-top: 1px solid #222;
 }
 .footer-content {
-    max-width: 1200px;
+    max-width: 700px;
     margin: 0 auto;
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
-.footer-col { flex: 1 1 250px; }
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+}
 .footer-col h3, .footer-col h4 { margin-bottom: 1rem; color: #fff; }
 .footer-col p { color: var(--text-secondary); }
 .social-links {
@@ -558,37 +562,19 @@ nav.scrolled {
 .footer-col ul li { margin-bottom: 0.5rem; }
 .footer-col ul li a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s; }
 .footer-col ul li a:hover { color: #fff; }
-.newsletter-form {
-    display: flex;
-    margin-top: 0.5rem;
-}
-.newsletter-form input {
-    flex: 1;
-    padding: 0.6rem;
-    border-radius: 8px 0 0 8px;
-    border: 1px solid #333;
-    background: #0a0a0a;
-    color: #fff;
-}
-.newsletter-form button {
-    background: #fff;
-    border: none;
-    padding: 0 1rem;
-    border-radius: 0 8px 8px 0;
-    color: #000;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.newsletter-form button:hover { background: #ddd; }
 .footer-bottom {
+    width: 100%;
+    max-width: 100%;
     text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #222;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #111;
     color: var(--text-muted);
     font-size: 0.85rem;
 }
-.footer-bottom a { color: var(--text-secondary); }
+.footer-bottom a {
+    color: var(--text-secondary);
+}
 
 /* ===== UTILITÁRIOS ===== */
 .animate-on-scroll {
@@ -700,7 +686,7 @@ nav.scrolled {
 }
 
 /* ===== RESPONSIVO ===== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .timeline-item { flex-direction: column; }
     .timeline-year { text-align: left; }
     .about-container {
@@ -721,4 +707,19 @@ nav.scrolled {
     .contact-form { padding: 0 1rem; }
     .form-group input,
     .form-group textarea { font-size: 16px; }
+    .featured-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .featured-cover {
+        flex: 0 0 auto;
+        max-width: 200px;
+        margin: 0 auto 1rem; /* centraliza a capa */
+    }
+    .featured-info {
+        text-align: center;
+    }
+    .featured-info h2 {
+        font-size: 2.5rem; /* um pouco menor no mobile */
+    }
 }

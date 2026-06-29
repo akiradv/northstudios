@@ -361,18 +361,23 @@
             background: #ddd;
             transform: translateY(-2px);
         }
-        @media (max-width: 600px) {
-            .featured-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            .featured-cover {
-                flex: 0 0 auto;
-                max-width: 200px;
-            }
-            .featured-info {
-                text-align: center;
-            }
+@media (max-width: 600px) {
+    .featured-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .featured-cover {
+        flex: 0 0 auto;
+        max-width: 200px;
+        margin: 0 auto 1rem; /* centraliza a capa */
+    }
+    .featured-info {
+        text-align: center;
+    }
+    .featured-info h2 {
+        font-size: 2.5rem; /* um pouco menor no mobile */
+    }
+}
         }
     </style>
 </head>
@@ -404,10 +409,10 @@
                 <img src="covers/soltryx/holldoneechoes.jpg" alt="HOLLDONE:ECHOES" />
             </div>
             <div class="featured-info">
-                <div class="featured-badge">Nosso maior lançamento até agora</div>
+                <div class="featured-badge" data-i18n="featuredBadge">Nosso maior lançamento até agora</div>
                 <h2>HOLLDONE:ECHOES</h2>
-                <p>Trilha sonora oficial de Holldone • Soltryx + Disk • 18 faixas</p>
-                <a href="https://band.link/holldoneechoes" target="_blank" class="featured-btn"><i class="fas fa-headphones"></i> Ouvir agora</a>
+                <p data-i18n="featuredSubtitle">Trilha sonora oficial de Holldone • Soltryx + Disk • 18 faixas</p>
+                <a href="https://band.link/holldoneechoes" target="_blank" class="featured-btn"><i class="fas fa-headphones"></i> <span data-i18n="featuredBtn">Ouvir agora</span></a>
             </div>
         </div>
     </div>

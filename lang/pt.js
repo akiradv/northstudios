@@ -155,5 +155,8 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "Batidas que contam histórias.",
   "Universo Holldone em expansão."],
   "releaseDateHolldoneEchoes": "27 Junho 2026",
-  "preSave": "Pré-save"
+  "preSave": "Pré-save",
+  "featuredBadge": "Nosso maior lançamento até agora",
+  "featuredSubtitle": "Trilha sonora oficial de Holldone • Soltryx + Disk • 18 faixas",
+  "featuredBtn": "Ouvir agora"
 };
