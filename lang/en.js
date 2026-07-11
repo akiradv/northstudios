@@ -22,8 +22,8 @@ window.I18N_TRANSLATIONS['en'] = {
   "aboutText1": "Soltryx is the musical project of <strong>Akiradv</strong>, born from the desire to explore new sonic universes. Combining electronic elements with influences from various genres, each track seeks to create immersive atmospheres and take the listener on a unique journey.",
   "aboutText2": "Since 2024, I've been experimenting with textures, rhythms, and melodies that reflect my experiences and artistic vision. All releases come out through the independent label <strong>North Studios</strong>, a private sound creation lab.",
   "aboutText3": "Each project is an invitation to expand the boundaries of creativity and discover new sonic landscapes. Welcome aboard.",
-  "aboutTextOrange1": "Orange Isle is an artistic project by the same creator of <strong>Soltryx</strong>, <strong>Akira Dev</strong>. Born from the desire to give life to beats that were scattered across YouTube, the goal is simple: create vibes. Each track is handpicked, given a name and cover art that people can relate to, and then released on platforms for everyone to listen.",
-  "aboutTextOrange2": "All songs are <strong>free for profit</strong>, meaning they can be used for free in projects with up to 5,000 streams. Above that, a license must be purchased. Credits for each producer are properly placed on the tracks (no Content ID). If you are a producer and are unhappy with the use of your music, or want it removed, contact us on Instagram: <strong>@orangeisle__</strong>.",
+  "aboutTextOrange1": "Orange Isle is an artistic project by Akira Dev, the creator behind Soltryx. Born from a desire to give life to beautiful beats scattered across YouTube, the goal is simple: create vibes. Each track is carefully handpicked and given a name and cover art that people can relate to, then released across streaming platforms for everyone to enjoy. The sound navigates through indie, jazz, and bossa nova, always leaning into an introspective and melancholic atmosphere.",
+  "aboutTextOrange2": "All songs are free for profit, meaning they can be used freely in projects with up to 5,000 streams. Beyond that, a license must be purchased. Every producer is properly credited on the tracks, and no Content ID is used. If you are a producer and are unhappy with the use of your music, or wish to have it removed, please reach out via Instagram: @orangeisle__.",
   "contactIntro": "Got an idea, proposal, or just want to say hi? Drop a message.",
   "contactIntroOrange": "Get in touch with Orange Isle.",
   "formName": "Name",
@@ -158,5 +158,8 @@ window.I18N_TRANSLATIONS['en'] = {
   "preSave": "Pre-save",
   "featuredBadge": "Our biggest release so far",
   "featuredSubtitle": "Official Holldone soundtrack • Soltryx + Disk • 18 tracks",
-  "featuredBtn": "Listen now"
+  "featuredBtn": "Listen now",
+  "releaseDateIntoDemo": "July 11, 2026",
+  "trackDescIntoDemo": "Soltryx demo with solo guitar. A sad and melancholic instrumental track, raw and without layers.",
+  "trackDescGoingToTheBeach": "Orange Isle summer single with a beach theme, bringing indie pop in light, sunny tracks."
 };

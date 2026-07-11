@@ -22,7 +22,7 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "aboutText1": "Soltryx é o projeto musical de <strong>Akiradv</strong>, nascido da vontade de explorar novos universos sonoros. Combinando elementos eletrônicos com influências de diversos gêneros, cada faixa busca criar atmosferas imersivas e levar o ouvinte a uma jornada única.",
   "aboutText2": "Desde 2024, venho experimentando texturas, ritmos e melodias que refletem minhas experiências e visão artística. Todos os lançamentos saem pelo selo independente <strong>North Studios</strong>, um laboratório particular de criação sonora.",
   "aboutText3": "Cada projeto é um convite para expandir os limites da criatividade e descobrir novas paisagens sonoras. Seja bem-vindo(a) a bordo.",
-  "aboutTextOrange1": "Orange Isle é um projeto artístico do mesmo criador de <strong>Soltryx</strong>, <strong>Akira Dev</strong>. Nascido da vontade de dar vida a beats que estavam soltos pelo YouTube, o objetivo é simples: criar vibes. Cada faixa é escolhida a dedo, recebendo um nome e uma capa com os quais as pessoas possam se identificar, e então é lançada nas plataformas para que todos possam ouvir.",
+  "aboutTextOrange1": "Orange Isle é um projeto artístico do mesmo criador de <strong>Soltryx</strong>, <strong>Akira Dev</strong>. Nascido da vontade de dar vida a beats que estavam soltos pelo YouTube, o objetivo é simples: criar vibes. Cada faixa é escolhida a dedo, recebendo um nome e uma capa com os quais as pessoas possam se identificar, e então é lançada nas plataformas para que todos possam ouvir. O som navega pelo indie, jazz e bossa nova, sempre inclinado a uma atmosfera introspectiva e melancólica.",
   "aboutTextOrange2": "Todas as músicas são <strong>free for profit</strong>, o que significa que podem ser usadas gratuitamente em projetos com até 5 mil streams. Acima disso, é necessário adquirir uma licença. Os créditos de cada produtor são devidamente colocados nas faixas (sem uso de Content ID). Se você é produtor e não gostou do uso da sua música, ou quer que ela seja removida, entre em contato pelo Instagram: <strong>@orangeisle__</strong>.",
   "contactIntro": "Tem alguma ideia, proposta ou só quer trocar uma ideia? Manda um alô.",
   "contactIntroOrange": "Entre em contato com Orange Isle.",
@@ -158,5 +158,8 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "preSave": "Pré-save",
   "featuredBadge": "Nosso maior lançamento até agora",
   "featuredSubtitle": "Trilha sonora oficial de Holldone • Soltryx + Disk • 18 faixas",
-  "featuredBtn": "Ouvir agora"
+  "featuredBtn": "Ouvir agora",
+  "releaseDateIntoDemo": "11 Julho 2026",
+  "trackDescIntoDemo": "Demo de Soltryx com violão solo. Uma faixa instrumental triste e melancólica, direta e sem camadas.",
+  "trackDescGoingToTheBeach": "Single de verão do Orange Isle com temática de praia, trazendo indie pop em faixas leves e ensolaradas."
 };
