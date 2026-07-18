@@ -161,5 +161,6 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "featuredBtn": "Ouvir agora",
   "releaseDateIntoDemo": "11 Julho 2026",
   "trackDescIntoDemo": "Demo de Soltryx com violão solo. Uma faixa instrumental triste e melancólica, direta e sem camadas.",
+  "releaseDateGoingToTheBeach": "18 Julho 2026",
   "trackDescGoingToTheBeach": "Single de verão do Orange Isle com temática de praia, trazendo indie pop em faixas leves e ensolaradas."
 };

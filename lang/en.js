@@ -161,5 +161,6 @@ window.I18N_TRANSLATIONS['en'] = {
   "featuredBtn": "Listen now",
   "releaseDateIntoDemo": "July 11, 2026",
   "trackDescIntoDemo": "Soltryx demo with solo guitar. A sad and melancholic instrumental track, raw and without layers.",
+  "releaseDateGoingToTheBeach": "July 18, 2026",
   "trackDescGoingToTheBeach": "Orange Isle summer single with a beach theme, bringing indie pop in light, sunny tracks."
 };
