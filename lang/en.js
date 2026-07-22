@@ -162,5 +162,15 @@ window.I18N_TRANSLATIONS['en'] = {
   "releaseDateIntoDemo": "July 11, 2026",
   "trackDescIntoDemo": "Soltryx demo with solo guitar. A sad and melancholic instrumental track, raw and without layers.",
   "releaseDateGoingToTheBeach": "July 18, 2026",
-  "trackDescGoingToTheBeach": "Orange Isle summer single with a beach theme, bringing indie pop in light, sunny tracks."
+  "trackDescGoingToTheBeach": "Orange Isle summer single with a beach theme, bringing indie pop in light, sunny tracks.",
+  "hubBenefitsTitle": "Why North Studios?",
+  "hubBenefit1Title": "Ultra-fast approval",
+  "hubBenefit1Text": "We normally approve within 2 hours. Maximum 3 business days on busy days.",
+  "hubBenefit2Title": "Great discounts",
+  "hubBenefit2Text": "Fair prices for those just starting out, no hidden fees. (Our monthly price is R$30, which would be R$360 per year, but we can make discounts.)",
+  "hubBenefit3Title": "Direct support",
+  "hubBenefit3Text": "No bureaucracy, no waiting days, we guarantee up to 3 business days for a reply on busy days, usually answered within 1 day. We serve you on Instagram and Email.",
+  "hubBenefit4Title": "We distribute to the main platforms",
+  "hubBenefit4Text": "Spotify, Apple Music, Deezer, Tidal, Amazon, Youtube and more.",
+  "hubBenefitsCta": "I want to distribute my music"
 };

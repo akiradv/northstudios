@@ -162,5 +162,15 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "releaseDateIntoDemo": "11 Julho 2026",
   "trackDescIntoDemo": "Demo de Soltryx com violão solo. Uma faixa instrumental triste e melancólica, direta e sem camadas.",
   "releaseDateGoingToTheBeach": "18 Julho 2026",
-  "trackDescGoingToTheBeach": "Single de verão do Orange Isle com temática de praia, trazendo indie pop em faixas leves e ensolaradas."
+  "trackDescGoingToTheBeach": "Single de verão do Orange Isle com temática de praia, trazendo indie pop em faixas leves e ensolaradas.".
+  "hubBenefitsTitle": "Por que a North Studios?",
+  "hubBenefit1Title": "Aprovação ultrarrápida",
+  "hubBenefit1Text": "Aprovamos em normalmente 2 horas. No máximo, 3 dias úteis em dias cheios.",
+  "hubBenefit2Title": "Descontos ótimos",
+  "hubBenefit2Text": "Preços justos para quem está começando, sem taxas escondidas. (Nosso preço mensal é R$30, o que daria R$360 anual, mas podemos fazer descontos.)",
+  "hubBenefit3Title": "Suporte direto",
+  "hubBenefit3Text": "Sem burocracia, sem dias de espera, garantimos até 3 dias úteis de resposta em dias cheios, resposta normalmente em 1 dia. Atendemos no Instagram e por Email",
+  "hubBenefit4Title": "Distribuímos para as principais plataformas",
+  "hubBenefit4Text": "Spotify, Apple Music, Deezer, Tidal, Amazon, Youtube e mais.",
+  "hubBenefitsCta": "Quero distribuir minha música"
 };

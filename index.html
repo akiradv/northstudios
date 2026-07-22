@@ -379,6 +379,49 @@
     }
 }
         }
+        
+        .benefits-section {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .benefit-item {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
+            transition: background 0.3s;
+        }
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .benefit-item i {
+            font-size: 2rem;
+            color: #fff;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+        }
+        .benefit-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .benefit-item p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        .benefits-cta {
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -420,6 +463,36 @@
     <div class="about-section">
         <h2 data-i18n="hubAboutTitle">Sobre a North Studios</h2>
         <p data-i18n="hubAboutText">A North Studios é um selo independente criado por Akira Dev. Aqui, a música vem em primeiro lugar — sem pressa, sem pressão, apenas o som guiando o caminho. Trabalhamos com artistas que têm personalidade e querem explorar sua própria sonoridade, seja ela qual for. Se você faz música com autenticidade, tem um espaço aqui.</p>
+    </div>
+
+    <!-- Por que distribuir com a North Studios? -->
+    <div class="benefits-section">
+        <h2 class="section-title" data-i18n="hubBenefitsTitle">Por que a North Studios?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <i class="fas fa-bolt"></i>
+                <h3 data-i18n="hubBenefit1Title">Aprovação ultrarrápida</h3>
+                <p data-i18n="hubBenefit1Text">Aprovamos em normalmente 2 horas. No máximo, 3 dias úteis em dias cheios.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-tag"></i>
+                <h3 data-i18n="hubBenefit2Title">Descontos ótimos</h3>
+                <p data-i18n="hubBenefit2Text">Preços justos para quem está começando, sem taxas escondidas. (Nosso preço mensal é R$30, o que daria R$360 anual, mas podemos fazer descontos.)</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-comments"></i>
+                <h3 data-i18n="hubBenefit3Title">Suporte direto</h3>
+                <p data-i18n="hubBenefit3Text">Sem burocracia, sem dias de espera, garantimos até 3 dias úteis de resposta em dias cheios, resposta normalmente em 1 dia. Atendemos no Instagram e por Email</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-globe"></i>
+                <h3 data-i18n="hubBenefit4Title">Distribuímos para as principais plataformas</h3>
+                <p data-i18n="hubBenefit4Text">Spotify, Apple Music, Deezer, Tidal, Amazon, Youtube e mais.</p>
+            </div>
+        </div>
+        <div class="benefits-cta">
+            <a href="#contato" class="featured-btn"><i class="fas fa-paper-plane"></i> <span data-i18n="hubBenefitsCta">Quero distribuir minha música</span></a>
+        </div>
     </div>
 
     <h2 class="section-title" data-i18n="hubArtistsTitle">Artistas</h2>
@@ -473,8 +546,8 @@
     </footer>
 </div>
 
-<script src="lang/pt.js?v=8"></script>
-<script src="lang/en.js?v=8"></script>
+<script src="lang/pt.js?v=10"></script>
+<script src="lang/en.js?v=10"></script>
 <script src="i18n.js"></script>
 
 <script>
