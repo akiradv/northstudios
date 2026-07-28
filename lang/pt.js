@@ -197,5 +197,9 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "neeizTrackSingular": "faixa",
   "neeizComingSoonBtn": "Em breve",
   "hubNeeizDesc": "Ouça BLACK OPS/CARTEL, o primeiro single de Neeiz SR.",
-  "neeizTimelineDesc": "Primeiro single de Neeiz SR. Ouça agora nas plataformas."
+  "neeizTimelineDesc": "Primeiro single de Neeiz SR. Ouça agora nas plataformas.",
+  "releaseTitleTryingAgain": "trying again another time of the day (demo)",
+  "releaseDescTryingAgain": "Demo de Soltryx. Uma faixa instrumental que captura a melancolia de tentar de novo em um momento diferente do dia.",
+  "releaseDescTryingAgainShort": "Demo de Soltryx. Instrumental melancólico e direto.",
+  "releaseDateTryingAgain": "22 Julho 2026"
 };
