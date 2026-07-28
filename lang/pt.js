@@ -186,7 +186,7 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "neeizSectionContact": "Contato",
   "neeizReleaseTitle": "BLACK OPS/CARTEL",
   "neeizReleaseDate": "Single • 28 Julho 2026",
-  "neeizReleaseDesc": "Primeiro single de Neeiz SR. Em breve nas plataformas.",
+  "neeizReleaseDesc": "Primeiro single de Neeiz SR. Já disponível nas plataformas.",
   "neeizAbout1": "Neeiz SR é um artista independente que chega à North Studios com um som direto, carregado de atitude e originalidade. Suas faixas misturam bases pesadas e melodias sombrias, criando uma atmosfera única que não se prende a um só gênero.",
   "neeizAbout2": "Com BLACK OPS/CARTEL, seu primeiro single, Neeiz SR mostra a que veio. A North Studios acredita nesse potencial criativo e tem orgulho de apresentar esse novo nome ao mundo.",
   "neeizContactIntro": "Entre em contato com Neeiz SR.",
