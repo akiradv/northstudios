@@ -196,5 +196,6 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "neeizReleaseTypeSingle": "Single",
   "neeizTrackSingular": "faixa",
   "neeizComingSoonBtn": "Em breve",
-  "hubNeeizDesc": "Ouça BLACK OPS/CARTEL, o primeiro single de Neeiz SR."
+  "hubNeeizDesc": "Ouça BLACK OPS/CARTEL, o primeiro single de Neeiz SR.",
+  "neeizTimelineDesc": "Primeiro single de Neeiz SR. Ouça agora nas plataformas."
 };

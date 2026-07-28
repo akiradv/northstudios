@@ -196,5 +196,6 @@ window.I18N_TRANSLATIONS['en'] = {
   "neeizReleaseTypeSingle": "Single",
   "neeizTrackSingular": "track",
   "neeizComingSoonBtn": "Coming soon",
-  "hubNeeizDesc": "Listen to BLACK OPS/CARTEL, the first single by Neeiz SR."
+  "hubNeeizDesc": "Listen to BLACK OPS/CARTEL, the first single by Neeiz SR.",
+  "neeizTimelineDesc": "First single by Neeiz SR. Listen now on platforms."
 };
