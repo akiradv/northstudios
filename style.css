@@ -404,30 +404,28 @@ nav.scrolled {
 
 /* ===== DISCOGRAFIA / TIMELINE ===== */
 .timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: 80px 1fr;  /* ano fixo, card flexível */
+    gap: 3rem 2rem;                  /* vertical 3rem, horizontal 2rem */
     position: relative;
 }
 .timeline::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 20px;          /* alinhado com a coluna do ano */
     top: 0;
     bottom: 0;
     width: 1px;
     background: #333;
+    z-index: 0;
 }
 .timeline-item {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
+    display: contents;   /* remove o wrapper, itens viram grid-items */
 }
 .timeline-year {
     font-size: 2rem;
     font-weight: 900;
     color: #fff;
-    min-width: 80px;
     text-align: right;
 }
 .timeline-card {
@@ -438,8 +436,9 @@ nav.scrolled {
     gap: 1rem;
     padding: 1rem;
     transition: transform 0.1s ease-out, box-shadow 0.3s, border-color 0.3s;
-    flex: 1;
     cursor: default;
+    height: 100%;        /* ocupa toda a altura da linha da grid */
+    box-sizing: border-box;
 }
 .timeline-card:hover {
     border-color: #555;
