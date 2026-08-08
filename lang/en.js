@@ -169,7 +169,7 @@ window.I18N_TRANSLATIONS['en'] = {
   "hubBenefit1Title": "Ultra-fast approval",
   "hubBenefit1Text": "We normally approve within 2 hours. Maximum 3 business days on busy days.",
   "hubBenefit2Title": "Great discounts",
-  "hubBenefit2Text": "Fair prices for those just starting out, no hidden fees. (Our monthly price is R$30, which would be R$360 per year, but we can make discounts.)",
+  "hubBenefit2Text": "Fair prices for those just starting out, no hidden fees. (Our monthly price is R$25, which would be R$300 per year, but we can make discounts.)",
   "hubBenefit3Title": "Direct support",
   "hubBenefit3Text": "No bureaucracy, no waiting days, we guarantee up to 3 business days for a reply on busy days, usually answered within 1 day. We serve you on Instagram and Email.",
   "hubBenefit4Title": "We distribute to the main platforms",

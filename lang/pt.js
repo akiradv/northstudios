@@ -169,7 +169,7 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "hubBenefit1Title": "Aprovação ultrarrápida",
   "hubBenefit1Text": "Aprovamos em normalmente 2 horas. No máximo, 3 dias úteis em dias cheios.",
   "hubBenefit2Title": "Descontos ótimos",
-  "hubBenefit2Text": "Preços justos para quem está começando, sem taxas escondidas. (Nosso preço mensal é R$30, o que daria R$360 anual, mas podemos fazer descontos.)",
+  "hubBenefit2Text": "Preços justos para quem está começando, sem taxas escondidas. (Nosso preço mensal é R$25, o que daria R$300 anual, mas podemos fazer descontos.)",
   "hubBenefit3Title": "Suporte direto",
   "hubBenefit3Text": "Sem burocracia, sem dias de espera, garantimos até 3 dias úteis de resposta em dias cheios, resposta normalmente em 1 dia. Atendemos no Instagram e por Email",
   "hubBenefit4Title": "Distribuímos para as principais plataformas",
