@@ -199,5 +199,8 @@ window.I18N_TRANSLATIONS['en'] = {
   "releaseTitleTryingAgain": "trying again another time of the day (demo)",
   "releaseDescTryingAgain": "Soltryx demo. An instrumental track that captures the melancholy of trying again at a different time of the day.",
   "releaseDescTryingAgainShort": "Soltryx demo. Melancholic and raw instrumental.",
-  "releaseDateTryingAgain": "July 22, 2026"
+  "releaseDateTryingAgain": "July 22, 2026",
+  "releaseDateStayingFor": "Released on August 8, 2026 • Single • 2 tracks",
+  "trackDescStayingFor": "Orange Isle's second summer single with a beach theme, bringing indie pop in light, sunny tracks.",
+  "releaseDateStayingForCard": "August 8, 2026",
 };
