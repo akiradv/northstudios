@@ -19,17 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<script>
-  (function() {
-    const currentLang = localStorage.getItem('i18n_lang') || 'pt-br';
-    const btnPT = document.getElementById('btn-pt');
-    const btnEN = document.getElementById('btn-en');
-    if (btnPT && btnEN) {
-      btnPT.classList.toggle('active', currentLang === 'pt-br');
-      btnEN.classList.toggle('active', currentLang === 'en');
-    }
-  })();
-</script>
 <body>
 
 <!-- Seletor de Idioma -->

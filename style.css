@@ -723,3 +723,102 @@ nav.scrolled {
     }
 }
 
+/* ===== ÍCONE TIDAL ===== */
+.tidal-icon {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* ===== LOADING STATES / SKELETON ===== */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.timeline-card img,
+.about-photo img,
+.featured-cover img,
+.release-cover {
+  background: linear-gradient(90deg,
+      rgba(255,255,255,0.05) 25%,
+      rgba(255,255,255,0.12) 50%,
+      rgba(255,255,255,0.05) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.3s linear infinite;
+}
+
+.timeline-card img,
+.about-photo img,
+.featured-cover img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+img.img-loaded {
+  opacity: 1;
+  animation: none;
+  background: none;
+}
+
+.release-cover { position: relative; border-radius: 12px; }
+.release-cover iframe { position: relative; border-radius: 12px; }
+
+/* ===== BOTÕES DE PLATAFORMA NO CELULAR (LADO A LADO) ===== */
+@media (max-width: 600px) {
+  .platform-links,
+  .release-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .platform-links a,
+  .release-links a {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.4rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+
+  /* botão ímpar sozinho na última linha ocupa tudo */
+  .platform-links a:last-child:nth-child(odd),
+  .release-links a:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ===== TIMELINE LARGA NO CELULAR ===== */
+@media (max-width: 600px) {
+  .timeline {
+    display: block;
+  }
+
+  .timeline-item {
+    display: block;
+    margin-bottom: 2.2rem;
+  }
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ano vira etiqueta acima do card */
+  .timeline-year {
+    text-align: left;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* card usa a largura inteira da tela */
+  .timeline-card {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -102,3 +102,22 @@ if (mobileBtn && navLinks) {
     mobileBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
     navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
 }
+
+// ========== LOADING STATES (SKELETON DAS IMAGENS) ==========
+document.querySelectorAll('img').forEach(img => {
+  const reveal = () => img.classList.add('img-loaded');
+  if (img.complete && img.naturalWidth > 0) {
+    reveal(); // imagem já estava em cache
+  } else {
+    img.addEventListener('load', reveal, { once: true });
+    img.addEventListener('error', reveal, { once: true });
+  }
+});
+
+// ========== ÍCONE TIDAL (SUBSTITUIÇÃO AUTOMÁTICA) ==========
+(function () {
+  const TIDAL_SVG = '<svg class="tidal-icon" viewBox="0 0 24 18" aria-hidden="true"><path d="M4 1l4 4-4 4-4-4z"/><path d="M12 1l4 4-4 4-4-4z"/><path d="M20 1l4 4-4 4-4-4z"/><path d="M12 9l4 4-4 4-4-4z"/></svg>';
+  document.querySelectorAll('i.fa-tidal').forEach(el => {
+    el.outerHTML = TIDAL_SVG;
+  });
+})();
