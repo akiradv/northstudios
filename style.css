@@ -1474,3 +1474,83 @@ img.img-loaded {
     color: #000 !important;
   }
 }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        footer a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        .footer-links {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            white-space: nowrap;
+        }
+        .footer-divider {
+            color: #444;
+        }
+        
+        /* Mobile */
+        @media (max-width: 480px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .footer-divider {
+                display: none;
+            }
+        }
+
+
+                .footer-terms {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .footer-term-link {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.5rem 0.8rem;
+            transition: color 0.2s;
+        }
+        .footer-term-link:hover {
+            color: #fff;
+        }
+        
+        /* Mobile - mais espaço pra clicar */
+        @media (max-width: 480px) {
+            .footer-terms {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .footer-term-link {
+                padding: 0.8rem 1rem;
+                display: block;
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+                background: rgba(255,255,255,0.02);
+                border-radius: 6px;
+                margin: 0.2rem auto;
+            }
+        }
