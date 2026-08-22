@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Termos de Serviço - North Studios">
+    <meta property="og:description" content="Como funciona o serviço de distribuição musical da North Studios.">
+    <meta property="og:url" content="https://northstudiosbr.qzz.io/termos-servico.html">
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/northstudios/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/northstudios/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/northstudios/favicon-16x16.png">
+
+    <title>Termos de Serviço — North Studios</title>
+    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn" onclick="changeLanguage('pt-br')" id="btn-pt">PT</button>
+    <button class="lang-btn" onclick="changeLanguage('en')" id="btn-en">EN</button>
+</div>
+
+<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-rocket"></i>
+</button>
+
+<nav id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="nav-logo">NORTH STUDIOS</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-i18n="navHome">Início</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<header id="home" class="hero servico-hero">
+    <div class="hero-content">
+        <h1 class="logo" data-i18n="servicoTitle">TERMOS DE SERVIÇO</h1>
+        <p class="hero-subtitle" data-i18n="servicoSubtitle">Como funciona a distribuição da North Studios</p>
+    </div>
+</header>
+
+<main class="content servico-content">
+    <!-- Índice Rápido -->
+    <section class="servico-toc animate-on-scroll">
+        <h2 data-i18n="servicoTocTitle">Nesta página</h2>
+        <div class="toc-grid">
+            <a href="#o-servico" class="toc-item">
+                <i class="fas fa-music"></i>
+                <span data-i18n="tocService">O serviço</span>
+            </a>
+            <a href="#valores" class="toc-item">
+                <i class="fas fa-dollar-sign"></i>
+                <span data-i18n="tocPricing">Valores</span>
+            </a>
+            <a href="#incluido" class="toc-item">
+                <i class="fas fa-box-open"></i>
+                <span data-i18n="tocIncluded">O que está incluído</span>
+            </a>
+            <a href="#processo" class="toc-item">
+                <i class="fas fa-rocket"></i>
+                <span data-i18n="tocProcess">Processo de lançamento</span>
+            </a>
+            <a href="#royalties" class="toc-item">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n="tocRoyalties">Royalties</span>
+            </a>
+            <a href="#cancelamento" class="toc-item">
+                <i class="fas fa-times-circle"></i>
+                <span data-i18n="tocCancel">Cancelamento</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <section class="servico-section" id="o-servico">
+        <div class="servico-card animate-on-scroll">
+            <div class="card-icon">
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="card-content">
+                <h3 data-i18n="servicoC1Title">1. O serviço</h3>
+                <p data-i18n-html="servicoC1">A North Studios é um serviço independente de distribuição musical que encaminha e gerencia lançamentos de artistas nas principais plataformas digitais: <strong>Spotify, Apple Music, Deezer, Tidal, Amazon Music e YouTube</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="servico-section" id="valores">
+        <div class="servico-card highlight animate-on-scroll">
+            <div class="card-icon">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="card-content">
+                <h3 data-i18n="servicoC2Title">2. Assinatura e valores</h3>
+                <div class="price-highlight">
+                    <span class="price" data-i18n="servicoPrice">R$ 25,00</span>
+                    <span class="price-period" data-i18n="servicoPricePeriod">/mês</span>
+                </div>
+                <p data-i18n-html="servicoC2">O serviço funciona por assinatura mensal com possibilidade de <strong>descontos para artistas iniciantes</strong>. A assinatura dá direito a envios ilimitados de lançamentos enquanto estiver ativa. O valor pago corresponde ao acesso ao serviço, não à compra de um lançamento específico.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="servico-section" id="incluido">
+        <div class="servico-card animate-on-scroll">
+            <div class="card-icon">
+                <i class="fas fa-box-open"></i>
+            </div>
+            <div class="card-content">
+                <h3 data-i18n="servicoC3Title">3. O que está incluído</h3>
+                <ul class="features-list">
+                    <li data-i18n="feature1"><i class="fas fa-check"></i> Distribuição nas plataformas digitais</li>
+                    <li data-i18n="feature2"><i class="fas fa-check"></i> Aprovação rápida (normalmente em até 2 horas)</li>
+                    <li data-i18n="feature3"><i class="fas fa-check"></i> Suporte direto via Instagram e email</li>
+                    <li data-i18n="feature4"><i class="fas fa-check"></i> Página personalizada no site da North Studios</li>
+                    <li data-i18n="feature5"><i class="fas fa-check"></i> Divulgação nas redes sociais do selo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="servico-section" id="processo">
+        <div class="servico-card animate-on-scroll">
+            <div class="card-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="card-content">
+                <h3 data-i18n="servicoC4Title">4. Processo de lançamento</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <p data-i18n="step1">Artista envia música, capa e informações</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <p data-i18n="step2">North Studios verifica e aprova</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <p data-i18n="step3">Encaminha para as plataformas</p>
+                    </div>
+                </div>
+                <p class="note" data-i18n-html="servicoC4Note"><i class="fas fa-info-circle"></i> Recomenda-se enviar com pelo menos <strong>7 dias de antecedência</strong> da data desejada.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="servico-section" id="royalties">
+        <div class="servico-card highlight animate-on-scroll">
+            <div class="card-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="card-content">
+                <h3 data-i18n="servicoC5Title">5. Royalties</h3>
+                <div class="royalty-highlight">
+                    <span class="royalty-percent">100%</span>
+                    <span class="royalty-text" data-i18n="servicoRoyaltyText">dos royalties são seus</span>
+                </div>
+                <p data-i18n-html="servicoC5">A North Studios <strong>não retém porcentagem dos streams</strong>. O repasse dos valores depende do recebimento pelas plataformas e parceiros de distribuição.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="servico-section" id="cancelamento">
+        <div class="servico-card animate-on-scroll">
+            <div class="card-icon">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="card-content">
+                <h3 data-i18n="servicoC6Title">6. Cancelamento e permanência</h3>
+                <p data-i18n-html="servicoC6">O artista pode cancelar a assinatura <strong>a qualquer momento</strong>. O cancelamento impede novos lançamentos, mas as músicas já distribuídas <strong>permanecem disponíveis nas plataformas</strong>.</p>
+                <div class="highlight-box">
+                    <i class="fas fa-star"></i>
+                    <p data-i18n-html="servicoC7"><strong>Diferente de outras distribuidoras</strong>, a North Studios não remove suas músicas quando você cancela. Elas continuam disponíveis para seus ouvintes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="servico-section">
+        <div class="servico-card animate-on-scroll">
+            <div class="card-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+            <div class="card-content">
+                <h3 data-i18n="servicoC8Title">7. Suporte</h3>
+                <p data-i18n-html="servicoC8">Atendimento direto e próximo, sem burocracia. Respostas normalmente em <strong>até 1 dia útil</strong> (máximo 3 dias em períodos de alta demanda). Suporte disponível em português e inglês.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="servico-section">
+        <div class="servico-card animate-on-scroll">
+            <div class="card-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="card-content">
+                <h3 data-i18n="servicoC9Title">8. Plataformas de terceiros</h3>
+                <p data-i18n-html="servicoC9">A North Studios depende das plataformas digitais para distribuição. Por isso, não é possível garantir aprovação de todos os lançamentos, inclusão em playlists, quantidade de streams ou permanência indefinida de conteúdo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="servico-cta animate-on-scroll">
+        <div class="cta-content">
+            <h2 data-i18n="servicoCtaTitle">Quer saber mais?</h2>
+            <p data-i18n="servicoCtaText">Leia os Termos do Artista para ver as regras completas, responsabilidades e políticas detalhadas.</p>
+            <div class="cta-buttons">
+                <a href="termos-artista.html" class="btn btn-primary" data-i18n="servicoCtaBtn1">
+                    <i class="fas fa-file-alt"></i> Termos do Artista
+                </a>
+                <a href="index.html#contato" class="btn btn-outline" data-i18n="servicoCtaBtn2">
+                    <i class="fas fa-envelope"></i> Entrar em contato
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <p class="termos-update" data-i18n="servicoUpdate">Última atualização: 17 de agosto de 2026</p>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>North Studios</h3>
+            <p data-i18n="footerTagline">Explorando novos universos sonoros.<br>Selo: North Studios</p>
+            <div class="social-links">
+                <a href="https://instagram.com/northstudiosbr" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:northstudiosbr@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4 data-i18n="footerLinks">Links</h4>
+            <ul>
+                <li><a href="index.html" data-i18n="navHome">Início</a></li>
+                <li><a href="termos-servico.html" data-i18n="footerServico">Termos de Serviço</a></li>
+                <li><a href="termos-artista.html" data-i18n="footerArtista">Termos do Artista</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p><span data-i18n="footerRights">© 2026 North Studios.</span> <a href="mailto:northstudiosbr@gmail.com">northstudiosbr@gmail.com</a></p>
+    </div>
+</footer>
+
+<script src="lang/pt.js?v=16"></script>
+<script src="lang/en.js?v=16"></script>
+<script src="i18n.js"></script>
+<script src="script.js?v=9"></script>
+<script>
+  (function() {
+    const currentLang = localStorage.getItem('i18n_lang') || 'pt-br';
+    const btnPT = document.getElementById('btn-pt');
+    const btnEN = document.getElementById('btn-en');
+    if (btnPT && btnEN) {
+      btnPT.classList.toggle('active', currentLang === 'pt-br');
+      btnEN.classList.toggle('active', currentLang === 'en');
+    }
+  })();
+</script>
+</body>
+</html>

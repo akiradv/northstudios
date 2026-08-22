@@ -822,3 +822,655 @@ img.img-loaded {
     height: auto;
   }
 }
+
+/* ===== PÁGINA DE TERMOS DE SERVIÇO ===== */
+.servico-hero {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 1rem;
+    font-weight: 300;
+}
+
+.servico-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Índice Rápido */
+.servico-toc {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.servico-toc h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.toc-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    color: #ccc;
+    transition: all 0.3s;
+}
+
+.toc-item:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.2);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.toc-item i {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* Cards de Serviço */
+.servico-section {
+    margin-bottom: 2rem;
+}
+
+.servico-card {
+    display: flex;
+    gap: 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: all 0.3s;
+}
+
+.servico-card:hover {
+    border-color: #555;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.servico-card.highlight {
+    background: linear-gradient(135deg, rgba(100,100,100,0.1) 0%, rgba(150,150,150,0.05) 100%);
+    border-color: #666;
+}
+
+.card-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.card-content p {
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.card-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Preço em destaque */
+.price-highlight {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.price-period {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* Royalties em destaque */
+.royalty-highlight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(100,200,100,0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(100,200,100,0.3);
+}
+
+.royalty-percent {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #6fcf6f;
+}
+
+.royalty-text {
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Lista de features */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    color: #ccc;
+}
+
+.features-list i {
+    color: #6fcf6f;
+    font-size: 1.1rem;
+}
+
+/* Processo em steps */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.step {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.step p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Nota informativa */
+.note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(100,150,255,0.1);
+    border-left: 3px solid #6495ed;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #b0c4de;
+}
+
+/* Highlight box */
+.highlight-box {
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: rgba(255,200,100,0.1);
+    border: 1px solid rgba(255,200,100,0.3);
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.highlight-box i {
+    color: #ffd700;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.highlight-box p {
+    margin: 0;
+    color: #fff;
+}
+
+/* Call to Action */
+.servico-cta {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin: 3rem 0 2rem;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.termos-update {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .servico-card {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .price {
+        font-size: 2.5rem;
+    }
+    
+    .royalty-percent {
+        font-size: 2.8rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+    
+    .toc-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== TERMOS DO ARTISTA ===== */
+.artista-hero {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #141414 0%, #262626 60%, #1a1a1a 100%);
+}
+
+.termos-box {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.termos-box p {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+  border: 2px solid #444 !important;
+  border-left: 4px solid #888 !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  margin: 1rem 0 !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+}
+
+.termos-box p:hover {
+  border-left-color: #fff !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transform: translateY(-2px);
+}
+
+.termos-box p strong {
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.termos-box ul {
+  margin: 1rem 0 0.5rem 1.5rem !important;
+  padding: 0 !important;
+  color: #d0d0d0 !important;
+  display: block !important;
+}
+
+.termos-box li {
+  margin-bottom: 0.6rem;
+  padding-left: 0.5rem;
+  list-style-type: disc;
+  color: #d0d0d0 !important;
+  display: list-item !important;
+}
+
+.termos-box li::marker {
+  color: #888;
+}
+
+.termos-box a {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+.termos-update {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.termos-sign {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.termos-sign a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.termos-sign a:hover {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .termos-box p {
+    padding: 1.4rem 1.2rem !important;
+  }
+  .termos-box p strong {
+    font-size: 1rem;
+  }
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  .termos-box p { background: #fff !important; border: 1px solid #ddd !important; border-left: 4px solid #000 !important; color: #000 !important; break-inside: avoid; }
+  .termos-box p strong { color: #000 !important; }
+  nav, footer, .lang-switcher, .back-to-top, .hero { display: none; }
+}
+
+/* Desativa o animate-on-scroll na página de termos do artista */
+.termos-box.animate-on-scroll {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.termos-box p {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: border-color .3s, transform .2s, box-shadow .3s !important;
+}
+
+/* ===== TERMOS DO ARTISTA E SERVIÇO ===== */
+
+/* Hero menor e mais discreto */
+.artista-hero,
+.servico-hero {
+  min-height: 25vh !important;
+  max-height: 30vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #0a0a0a !important;
+  padding: 2rem 1rem !important;
+}
+
+.artista-hero .logo,
+.servico-hero .logo {
+  font-size: clamp(1.8rem, 5vw, 3rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  color: #fff !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.hero-subtitle {
+  font-size: 0.95rem !important;
+  color: #888 !important;
+  font-weight: 300 !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Container dos termos */
+.termos-box {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  max-width: 900px !important;
+  margin: 3rem auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Cards individuais */
+.termos-box > * {
+  background: #111 !important;
+  border: 1px solid #2a2a2a !important;
+  border-left: 3px solid #444 !important;
+  border-radius: 8px !important;
+  padding: 1.5rem !important;
+  margin: 0 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  color: #ccc !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: border-left-color 0.3s, box-shadow 0.3s !important;
+}
+
+.termos-box > *:hover {
+  border-left-color: #fff !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+}
+
+/* Títulos dos cards */
+.termos-box > * strong {
+  color: #fff !important;
+  font-size: 1.05rem !important;
+  display: block !important;
+  margin-bottom: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.3px !important;
+}
+
+/* Listas dentro dos cards */
+.termos-box > * ul {
+  margin: 1rem 0 0.5rem 1.5rem !important;
+  padding: 0 !important;
+  color: #bbb !important;
+  display: block !important;
+}
+
+.termos-box > * li {
+  margin-bottom: 0.5rem !important;
+  padding-left: 0.3rem !important;
+  list-style-type: disc !important;
+  color: #bbb !important;
+  display: list-item !important;
+  font-size: 0.95rem !important;
+}
+
+.termos-box > * li::marker {
+  color: #666 !important;
+}
+
+/* Links */
+.termos-box > * a {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+
+/* Texto de atualização e assinatura */
+.termos-update {
+  text-align: center !important;
+  font-size: 0.8rem !important;
+  color: #555 !important;
+  margin: 3rem 0 1rem !important;
+}
+
+.termos-sign {
+  text-align: center !important;
+  font-size: 0.85rem !important;
+  color: #666 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 3rem !important;
+}
+
+.termos-sign a {
+  color: #888 !important;
+  text-decoration: none !important;
+}
+
+.termos-sign a:hover {
+  color: #fff !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .artista-hero,
+  .servico-hero {
+    min-height: 20vh !important;
+    padding: 1.5rem 1rem !important;
+  }
+  
+  .artista-hero .logo,
+  .servico-hero .logo {
+    font-size: 1.8rem !important;
+  }
+  
+  .termos-box > * {
+    padding: 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .termos-box > * strong {
+    font-size: 1rem !important;
+  }
+}
+
+/* Impressão */
+@media print {
+  .artista-hero,
+  .servico-hero,
+  nav,
+  footer,
+  .lang-switcher,
+  .back-to-top {
+    display: none !important;
+  }
+  
+  .termos-box > * {
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px solid #ddd !important;
+    border-left: 3px solid #000 !important;
+    break-inside: avoid !important;
+  }
+  
+  .termos-box > * strong {
+    color: #000 !important;
+  }
+}

@@ -421,6 +421,22 @@
         .benefits-cta {
             text-align: center;
         }
+        .form-terms-link {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 1.2rem;
+            line-height: 1.5;
+        }
+        .form-terms-link a {
+            color: #888;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        .form-terms-link a:hover {
+            color: #fff;
+        }
+
 
     </style>
 </head>
@@ -510,30 +526,41 @@
         <p data-i18n="hubContactText">Quer lançar sua música pela North Studios? Entre em contato que a gente conversa sobre valores. Sempre fazemos descontos bons pra quem tá começando.</p>
         
         <form id="contactFormHub" class="contact-form-hub">
-    <input type="hidden" name="artista" value="Hub North Studios">
-    <input type="hidden" name="_subject" value="Contato via Hub da North Studios">
-    <input type="hidden" name="_next" value="https://akiradv.github.io/northstudios/thanks.html">
-    
-    <div data-fs-success style="display:none; color: #fff; text-align:center; margin-bottom:1rem;">Mensagem enviada! 🚀</div>
-    <div data-fs-error style="display:none; color: #ff6b6b; text-align:center; margin-bottom:1rem;"></div>
+            <input type="hidden" name="artista" value="Hub North Studios">
+            <input type="hidden" name="_subject" value="Contato via Hub da North Studios">
+            <input type="hidden" name="_next" value="https://akiradv.github.io/northstudios/thanks.html">
+            
+            <div data-fs-success style="display:none; color: #fff; text-align:center; margin-bottom:1rem;">Mensagem enviada! 🚀</div>
+            <div data-fs-error style="display:none; color: #ff6b6b; text-align:center; margin-bottom:1rem;"></div>
 
-    <div class="form-group-hub">
-        <input type="text" id="nome-hub" name="nome" data-fs-field required placeholder="Nome">
-    </div>
-    <div class="form-group-hub">
-        <input type="email" id="email-hub" name="email" data-fs-field required placeholder="Email">
-    </div>
-    <div class="form-group-hub">
-        <textarea id="mensagem-hub" name="mensagem" rows="4" data-fs-field required placeholder="Mensagem"></textarea>
-    </div>
-    <button type="submit" class="contact-btn" data-fs-submit-btn>
-        <i class="fas fa-paper-plane"></i> <span data-i18n="hubContactBtn">Falar comigo</span>
-    </button>
-</form>
+            <div class="form-group-hub">
+                <input type="text" id="nome-hub" name="nome" data-fs-field required placeholder="Nome">
+            </div>
+            <div class="form-group-hub">
+                <input type="email" id="email-hub" name="email" data-fs-field required placeholder="Email">
+            </div>
+            <div class="form-group-hub">
+                <textarea id="mensagem-hub" name="mensagem" rows="4" data-fs-field required placeholder="Mensagem"></textarea>
+            </div>
+            <button type="submit" class="contact-btn" data-fs-submit-btn>
+                <i class="fas fa-paper-plane"></i> <span data-i18n="hubContactBtn">Falar comigo</span>
+            </button>
+            
+            <!-- Link para os termos -->
+            <p class="form-terms-link">
+                <span data-i18n="formTermsNotice">Ao enviar, você concorda em receber informações sobre o serviço.</span>
+                <a href="termos-servico.html" target="_blank" data-i18n="formTermsLink">Leia os termos de distribuição →</a>
+            </p>
+        </form>
     </div>
 
     <footer>
         <p>© 2026 North Studios. <a href="mailto:northstudiosbr@gmail.com">northstudiosbr@gmail.com</a></p>
+        <div style="margin-top: 1rem; font-size: 0.85rem;">
+            <a href="termos-servico.html" style="color: #888; margin: 0 0.5rem;">Termos de Serviço</a>
+            <span style="color: #444;">•</span>
+            <a href="termos-artista.html" style="color: #888; margin: 0 0.5rem;">Termos do Artista</a>
+        </div>
     </footer>
 </div>
 
