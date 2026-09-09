@@ -246,5 +246,13 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "artistaC13": "<strong>13. Plataformas de terceiros</strong> — A North Studios não controla as políticas, algoritmos, sistemas, pagamentos ou decisões das plataformas digitais. Por isso, não é possível garantir: <ul><li>aprovação de todos os lançamentos;</li><li>inclusão em playlists;</li><li>quantidade de streams;</li><li>posicionamento em plataformas;</li><li>permanência de um conteúdo;</li><li>prazo específico de processamento por uma plataforma.</li></ul>",
   "artistaC14": "<strong>14. Dados pessoais</strong> — Os dados fornecidos pelo artista serão utilizados para prestação do serviço, comunicação, gerenciamento da conta e distribuição dos lançamentos. Quando necessário para realizar a distribuição, determinadas informações poderão ser compartilhadas com plataformas e parceiros envolvidos no serviço. A North Studios não vende os dados pessoais dos artistas.",
   "artistaC15": "<strong>15. Alterações destes termos</strong> — A North Studios poderá atualizar estes Termos do Artista quando necessário. Alterações relevantes serão comunicadas aos artistas pelos canais disponíveis. A continuidade da utilização dos serviços após a atualização poderá representar a concordância com os novos termos, quando permitido pela legislação aplicável.",
-  "artistaC16": "<strong>16. Aceitação</strong> — Ao contratar ou utilizar os serviços da North Studios, o artista declara que: <ul><li>leu estes Termos do Artista;</li><li>compreendeu suas condições;</li><li>possui autorização para distribuir os conteúdos enviados;</li><li>concorda em cumprir as regras estabelecidas pela North Studios e pelas plataformas de distribuição.</li></ul>"
+  "artistaC16": "<strong>16. Aceitação</strong> — Ao contratar ou utilizar os serviços da North Studios, o artista declara que: <ul><li>leu estes Termos do Artista;</li><li>compreendeu suas condições;</li><li>possui autorização para distribuir os conteúdos enviados;</li><li>concorda em cumprir as regras estabelecidas pela North Studios e pelas plataformas de distribuição.</li></ul>",
+  "releaseTitleUnfinished": "unfinished weather",
+  "releaseDateUnfinished": "09 Setembro 2026",
+  "releaseDateUnfinishedCard": "09 Setembro 2026",
+  "releaseDescUnfinished": "Álbum inteiro feito durante uma viagem. As músicas foram propositalmente deixadas com uma estética 'não finalizada', sem mixagem, produzidas em um notebook com FL Studio Free e exportadas diretamente para a distribuidora.",
+  "releaseDescUnfinishedShort": "Álbum inteiro feito durante uma viagem. Estética 'não finalizada', sem mixagem, produzido em notebook com FL Studio Free.",
+  "releaseTitleAstro": "astro",
+  "releaseDateAstroCard": "29 Agosto 2026",
+  "releaseDescAstroShort": "Primeiro single de um novo álbum que está por vir.",
 };

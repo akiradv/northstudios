@@ -246,5 +246,13 @@ window.I18N_TRANSLATIONS['en'] = {
   "artistaC13": "<strong>13. Third-party platforms</strong> — North Studios does not control the policies, algorithms, systems, payments or decisions of digital platforms. Therefore, it is not possible to guarantee: <ul><li>approval of all releases;</li><li>inclusion in playlists;</li><li>number of streams;</li><li>positioning on platforms;</li><li>permanence of content;</li><li>specific processing time by a platform.</li></ul>",
   "artistaC14": "<strong>14. Personal data</strong> — The data provided by the artist will be used for the provision of the service, communication, account management and distribution of releases. When necessary to carry out the distribution, certain information may be shared with platforms and partners involved in the service. North Studios does not sell the artists' personal data.",
   "artistaC15": "<strong>15. Changes to these terms</strong> — North Studios may update these Artist Terms when necessary. Relevant changes will be communicated to artists through the available channels. Continued use of the services after the update may represent agreement with the new terms, when permitted by applicable legislation.",
-  "artistaC16": "<strong>16. Acceptance</strong> — By hiring or using North Studios' services, the artist declares that they: <ul><li>have read these Artist Terms;</li><li>have understood their conditions;</li><li>have authorization to distribute the submitted content;</li><li>agree to comply with the rules established by North Studios and the distribution platforms.</li></ul>"
+  "artistaC16": "<strong>16. Acceptance</strong> — By hiring or using North Studios' services, the artist declares that they: <ul><li>have read these Artist Terms;</li><li>have understood their conditions;</li><li>have authorization to distribute the submitted content;</li><li>agree to comply with the rules established by North Studios and the distribution platforms.</li></ul>",
+  "releaseTitleUnfinished": "unfinished weather",
+  "releaseDateUnfinished": "September 9, 2026",
+  "releaseDateUnfinishedCard": "September 9, 2026",
+  "releaseDescUnfinished": "An entire album made during a trip. The tracks were intentionally left with an 'unfinished' aesthetic, unmixed, produced on a laptop with FL Studio Free and exported directly to the distributor.",
+  "releaseDescUnfinishedShort": "An entire album made during a trip. 'Unfinished' aesthetic, unmixed, produced on a laptop with FL Studio Free.",
+  "releaseTitleAstro": "astro",
+  "releaseDateAstroCard": "August 29, 2026",
+  "releaseDescAstroShort": "First single from an upcoming album.",
 };
