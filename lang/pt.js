@@ -255,4 +255,9 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "releaseTitleAstro": "astro",
   "releaseDateAstroCard": "29 Agosto 2026",
   "releaseDescAstroShort": "Primeiro single de um novo álbum que está por vir.",
+  "releaseTitleEB": "EB",
+  "releaseDateEB": "15 Setembro 2026",
+  "releaseDateEBCard": "15 Setembro 2026",
+  "releaseDescEB": "Uma música de homenagem feita a pedido de um menino que perdeu sua amiga. Orange Isle dedicou esta faixa a ela, usando suas iniciais \"EB\".",
+  "releaseDescEBShort": "Música de homenagem dedicada a uma amiga perdida, usando suas iniciais \"EB\".",
 };

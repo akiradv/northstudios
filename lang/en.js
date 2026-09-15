@@ -255,4 +255,9 @@ window.I18N_TRANSLATIONS['en'] = {
   "releaseTitleAstro": "astro",
   "releaseDateAstroCard": "August 29, 2026",
   "releaseDescAstroShort": "First single from an upcoming album.",
+  "releaseTitleEB": "EB",
+  "releaseDateEB": "September 15, 2026",
+  "releaseDateEBCard": "September 15, 2026",
+  "releaseDescEB": "A tribute song requested by a boy who lost his friend. Orange Isle dedicated this track to her, using her initials \"EB\".",
+  "releaseDescEBShort": "A tribute song dedicated to a lost friend, using her initials \"EB\".",
 };
