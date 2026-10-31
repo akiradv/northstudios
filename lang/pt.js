@@ -275,4 +275,9 @@ window.I18N_TRANSLATIONS['pt-br'] = {
   "releaseDateNewWorldCard": "22 Setembro 2026",
   "releaseDescNewWorld": "Novo single de 2 faixas, continuando a exploração de novos universos sonoros após o álbum 'unfinished weather'.",
   "releaseDescNewWorldShort": "Novo single de 2 faixas, continuando a exploração de novos universos sonoros.",
+  "releaseTitleILoveOctober": "I Love October",
+  "releaseDateILoveOctober": "31 Outubro 2026",
+  "releaseDateILoveOctoberCard": "31 Outubro 2026",
+  "releaseDescILoveOctober": "Um novo single do Orange Isle, capturando a essência e a nostalgia do mês de outubro.",
+  "releaseDescILoveOctoberShort": "Single capturando a essência e a nostalgia do mês de outubro.",
 };

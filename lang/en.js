@@ -275,4 +275,9 @@ window.I18N_TRANSLATIONS['en'] = {
   "releaseDateNewWorldCard": "September 22, 2026",
   "releaseDescNewWorld": "New 2-track single, continuing the exploration of new sonic universes after the 'unfinished weather' album.",
   "releaseDescNewWorldShort": "New 2-track single, continuing the exploration of new sonic universes.",
+    "releaseTitleILoveOctober": "I Love October",
+  "releaseDateILoveOctober": "October 31, 2026",
+  "releaseDateILoveOctoberCard": "October 31, 2026",
+  "releaseDescILoveOctober": "A new single by Orange Isle, capturing the essence and nostalgia of the month of October.",
+  "releaseDescILoveOctoberShort": "A single capturing the essence and nostalgia of the month of October.",
 };
